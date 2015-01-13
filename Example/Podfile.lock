@@ -1,0 +1,14 @@
+PODS:
+  - TNKRefreshControl (0.1.0)
+
+DEPENDENCIES:
+  - TNKRefreshControl (from `../`)
+
+EXTERNAL SOURCES:
+  TNKRefreshControl:
+    :path: ../
+
+SPEC CHECKSUMS:
+  TNKRefreshControl: 04567c856a172617df75ffd3b5779904fde5f2bd
+
+COCOAPODS: 0.35.0

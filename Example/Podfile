@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'TNKRefreshControl', :exclusive => true do
+  pod "TNKRefreshControl", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "TNKRefreshControl", :path => "../"
+
+  
+end
