@@ -1,5 +1,5 @@
 #include "Pods-Tests-TNKRefreshControl.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/TNKRefreshControl" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/TNKRefreshControl"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/TNKRefreshControl" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CKShapeView" "${PODS_ROOT}/Headers/Public/TNKRefreshControl"
 OTHER_LDFLAGS = -ObjC
 PODS_ROOT = ${SRCROOT}

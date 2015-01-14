@@ -8,11 +8,15 @@
 
 #import "TCActivityIndicatorView.h"
 
+#import <CKShapeView/CKShapeView.h>
+
+
+#define TNKActivityIndicatorViewLineWidth (2.0)
+
 
 @interface TCActivityIndicatorView ()
 {
-    UIView *_spinnerView;
-    CAShapeLayer *_spinnerLayer;
+    CKShapeView *_spinnerView;
     CATransform3D _defaultTransform;
     
     BOOL _animating;
@@ -35,9 +39,9 @@
 {
     [CATransaction setDisableActions:YES];
     if (!_animating) {
-        _spinnerLayer.strokeEnd = 0.9 * _progress + _spinnerLayer.strokeStart;
+        _spinnerView.strokeEnd = 0.9 * _progress + _spinnerView.strokeStart;
     } else {
-        _spinnerLayer.strokeEnd = 0.95;
+        _spinnerView.strokeEnd = 0.95;
     }
     [CATransaction setDisableActions:NO];
 }
@@ -51,7 +55,7 @@
 {
     [super tintColorDidChange];
     
-    _spinnerLayer.strokeColor = self.tintColor.CGColor;
+    _spinnerView.strokeColor = self.tintColor;
 }
 
 
@@ -63,17 +67,13 @@
     if (self) {
         _defaultTransform = CATransform3DMakeRotation(-M_PI_2, 0.0, 0.0, 1.0);
         
-        _spinnerView = [UIView new];
+        _spinnerView = [CKShapeView new];
+        _spinnerView.fillColor = [UIColor clearColor];
+        _spinnerView.strokeColor = self.tintColor;
+        _spinnerView.strokeStart = 0.05;
+        _spinnerView.strokeEnd = 0.95;
+        _spinnerView.layer.transform = _defaultTransform;
         [self addSubview:_spinnerView];
-        
-        _spinnerLayer = [[CAShapeLayer alloc] init];
-        [_spinnerView.layer addSublayer:_spinnerLayer];
-        _spinnerLayer.fillColor = [UIColor clearColor].CGColor;
-        _spinnerLayer.lineWidth = 2.0;
-        _spinnerLayer.strokeColor = self.tintColor.CGColor;
-        _spinnerLayer.strokeStart = 0.05;
-        _spinnerLayer.strokeEnd = 0.95;
-        _spinnerLayer.transform = _defaultTransform;
     }
     return self;
 }
@@ -96,9 +96,10 @@
     [super layoutSubviews];
     
     _spinnerView.frame = self.bounds;
-    _spinnerLayer.frame = _spinnerView.bounds;
-    CGRect pathRect = CGRectInset(_spinnerLayer.bounds, _spinnerLayer.lineWidth / 2.0, _spinnerLayer.lineWidth / 2.0);
-    _spinnerLayer.path = [UIBezierPath bezierPathWithOvalInRect:pathRect].CGPath;
+    CGRect pathRect = CGRectInset(_spinnerView.bounds, TNKActivityIndicatorViewLineWidth / 2.0, TNKActivityIndicatorViewLineWidth / 2.0);
+    UIBezierPath *path = path = [UIBezierPath bezierPathWithOvalInRect:pathRect];
+    path.lineWidth = TNKActivityIndicatorViewLineWidth;
+    _spinnerView.path = path;
 }
 
 
@@ -115,7 +116,7 @@
     refreshingAnimation.repeatCount = CGFLOAT_MAX;
     refreshingAnimation.fromValue = @(-M_PI_2);
     refreshingAnimation.toValue = @(M_PI * 2.0 - M_PI_2);
-    [_spinnerLayer addAnimation:refreshingAnimation forKey:@"refreshing"];
+    [_spinnerView.layer addAnimation:refreshingAnimation forKey:@"refreshing"];
 }
 
 - (void)stopAnimating
@@ -124,7 +125,7 @@
     
     [self _updateProgress];
     
-    [_spinnerLayer removeAnimationForKey:@"refreshing"];
+    [_spinnerView.layer removeAnimationForKey:@"refreshing"];
 }
 
 @end

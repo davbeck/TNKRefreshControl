@@ -6,6 +6,12 @@
 // project.
 
 
+// CKShapeView
+#define COCOAPODS_POD_AVAILABLE_CKShapeView
+#define COCOAPODS_VERSION_MAJOR_CKShapeView 0
+#define COCOAPODS_VERSION_MINOR_CKShapeView 1
+#define COCOAPODS_VERSION_PATCH_CKShapeView 2
+
 // TNKRefreshControl
 #define COCOAPODS_POD_AVAILABLE_TNKRefreshControl
 #define COCOAPODS_VERSION_MAJOR_TNKRefreshControl 0

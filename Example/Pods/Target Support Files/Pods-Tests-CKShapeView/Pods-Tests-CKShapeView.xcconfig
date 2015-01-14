@@ -1,0 +1,1 @@
+PODS_TESTS_CKSHAPEVIEW_OTHER_LDFLAGS = -framework "QuartzCore" -framework "UIKit"

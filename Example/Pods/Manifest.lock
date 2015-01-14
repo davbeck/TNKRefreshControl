@@ -1,5 +1,7 @@
 PODS:
-  - TNKRefreshControl (0.1.0)
+  - CKShapeView (0.1.2)
+  - TNKRefreshControl (0.1.0):
+    - CKShapeView (~> 0.1)
 
 DEPENDENCIES:
   - TNKRefreshControl (from `../`)
@@ -9,6 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  TNKRefreshControl: 04567c856a172617df75ffd3b5779904fde5f2bd
+  CKShapeView: 92592c9c227ff0a6f6644aca746a74a7984cea3b
+  TNKRefreshControl: 992df73a4507c7f68007d8045afaeba4e7e21ba2
 
 COCOAPODS: 0.35.0
