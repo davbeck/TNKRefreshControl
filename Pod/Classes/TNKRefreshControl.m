@@ -105,11 +105,11 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     
     self = [super initWithFrame:frame];
     if (self != nil) {
-        self.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.1];
+//        self.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.1];
         
         _activityIndicator = [TCActivityIndicatorView new];
         [self addSubview:_activityIndicator];
-        _activityIndicator.backgroundColor = [UIColor greenColor];
+//        _activityIndicator.backgroundColor = [UIColor greenColor];
     }
     
     return self;
@@ -139,15 +139,27 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     self.frame = CGRectMake(0.0, self.scrollView.contentOffset.y + self.scrollView.contentInset.top - self.addedContentInset.top,
                             self.scrollView.bounds.size.width, TNKRefreshControlHeight);
     
-    if (!self.refreshing) {
-        CGFloat percent = MAX(MIN(-self.frame.origin.y - 10.0, 75.0), 0.0) / 75.0;
-        
-        _activityIndicator.progress = percent;
-        
-        
-        if (-self.frame.origin.y > 100.0) {
-            [self beginRefreshing];
-            [self sendActionsForControlEvents:UIControlEventValueChanged];
+    switch (_state) {
+        case TNKRefreshControlStateWaiting: {
+            CGFloat percent = MAX(MIN(-self.frame.origin.y - 10.0, 75.0), 0.0) / 75.0;
+            
+            _activityIndicator.progress = percent;
+            
+            if (-self.frame.origin.y > 100.0) {
+                [self beginRefreshing];
+                [self sendActionsForControlEvents:UIControlEventValueChanged];
+            }
+            
+            break;
+        } case TNKRefreshControlStateEnding: {
+            if (self.scrollView.contentOffset.y >= -self.scrollView.contentInset.top) {
+                _state = TNKRefreshControlStateWaiting;
+            }
+            
+            break;
+        } case TNKRefreshControlStateRefreshing: {
+            
+            break;
         }
     }
 }
@@ -156,6 +168,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 {
     _state = TNKRefreshControlStateRefreshing;
     
+    _activityIndicator.progress = 0.0;
     [_activityIndicator startAnimating];
     
     if (self.scrollView.dragging) {
@@ -170,10 +183,11 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 - (void)endRefreshing
 {
-    _state = TNKRefreshControlStateEnding;
+    [_activityIndicator stopAnimatingWithFadeAwayAnimation:YES completion:^{
+        _state = TNKRefreshControlStateEnding;
+    }];
     
-    [_activityIndicator stopAnimating];
-    
+    _draggingEndedAction = nil;
     [self setAddedContentInset:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0) animated:YES];
     if (self.scrollView.contentOffset.y < -self.scrollView.contentInset.top && !self.scrollView.dragging) {
         CGPoint contentOffset = self.scrollView.contentOffset;

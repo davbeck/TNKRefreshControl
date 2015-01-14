@@ -124,17 +124,36 @@
 
 - (void)stopAnimating
 {
-    [UIView animateWithDuration:0.2 delay:0.0 options:0 animations:^{
-        _spinnerView.alpha = 0.0;
-        _spinnerView.transform = CGAffineTransformScale(_spinnerView.transform, 0.1, 0.1);
-    } completion:^(BOOL finished) {
-        _spinnerView.alpha = 1.0;
-        _spinnerView.transform = _defaultTransform;
-        
+    [self stopAnimatingWithFadeAwayAnimation:YES completion:nil];
+}
+
+- (void)stopAnimatingWithFadeAwayAnimation:(BOOL)animated completion:(void (^)())completion
+{
+    if (animated) {
+        [UIView animateWithDuration:0.2 delay:0.0 options:0 animations:^{
+            _spinnerView.alpha = 0.0;
+            _spinnerView.transform = CGAffineTransformScale(_spinnerView.transform, 0.1, 0.1);
+        } completion:^(BOOL finished) {
+            _spinnerView.alpha = 1.0;
+            _spinnerView.transform = _defaultTransform;
+            
+            _animating = NO;
+            [_spinnerView.layer removeAnimationForKey:@"refreshing"];
+            [self _updateProgress];
+            
+            if (completion != nil) {
+                completion();
+            }
+        }];
+    } else {
         _animating = NO;
         [_spinnerView.layer removeAnimationForKey:@"refreshing"];
         [self _updateProgress];
-    }];
+        
+        if (completion != nil) {
+            completion();
+        }
+    }
 }
 
 @end
