@@ -175,7 +175,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     [_activityIndicator stopAnimating];
     
     [self setAddedContentInset:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0) animated:YES];
-    if (self.scrollView.contentOffset.y < -self.scrollView.contentInset.top) {
+    if (self.scrollView.contentOffset.y < -self.scrollView.contentInset.top && !self.scrollView.dragging) {
         CGPoint contentOffset = self.scrollView.contentOffset;
         contentOffset.y = -self.scrollView.contentInset.top;
         [self.scrollView setContentOffset:contentOffset animated:YES];

@@ -17,7 +17,7 @@
 @interface TCActivityIndicatorView ()
 {
     CKShapeView *_spinnerView;
-    CATransform3D _defaultTransform;
+    CGAffineTransform _defaultTransform;
     
     BOOL _animating;
 }
@@ -65,14 +65,14 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _defaultTransform = CATransform3DMakeRotation(-M_PI_2, 0.0, 0.0, 1.0);
+        _defaultTransform = CGAffineTransformMakeRotation(-M_PI_2);
         
         _spinnerView = [CKShapeView new];
         _spinnerView.fillColor = [UIColor clearColor];
         _spinnerView.strokeColor = self.tintColor;
         _spinnerView.strokeStart = 0.05;
         _spinnerView.strokeEnd = 0.95;
-        _spinnerView.layer.transform = _defaultTransform;
+        _spinnerView.transform = _defaultTransform;
         [self addSubview:_spinnerView];
     }
     return self;
@@ -95,7 +95,10 @@
 {
     [super layoutSubviews];
     
-    _spinnerView.frame = self.bounds;
+    // because we are transforming this view all over the place, we can't set the frame
+    _spinnerView.bounds = self.bounds;
+    _spinnerView.center = CGPointMake(self.bounds.size.width / 2.0, self.bounds.size.height / 2.0);
+    
     CGRect pathRect = CGRectInset(_spinnerView.bounds, TNKActivityIndicatorViewLineWidth / 2.0, TNKActivityIndicatorViewLineWidth / 2.0);
     UIBezierPath *path = path = [UIBezierPath bezierPathWithOvalInRect:pathRect];
     path.lineWidth = TNKActivityIndicatorViewLineWidth;
@@ -121,11 +124,17 @@
 
 - (void)stopAnimating
 {
-    _animating = NO;
-    
-    [self _updateProgress];
-    
-    [_spinnerView.layer removeAnimationForKey:@"refreshing"];
+    [UIView animateWithDuration:0.2 delay:0.0 options:0 animations:^{
+        _spinnerView.alpha = 0.0;
+        _spinnerView.transform = CGAffineTransformScale(_spinnerView.transform, 0.1, 0.1);
+    } completion:^(BOOL finished) {
+        _spinnerView.alpha = 1.0;
+        _spinnerView.transform = _defaultTransform;
+        
+        _animating = NO;
+        [_spinnerView.layer removeAnimationForKey:@"refreshing"];
+        [self _updateProgress];
+    }];
 }
 
 @end
