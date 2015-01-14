@@ -166,6 +166,10 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 - (void)beginRefreshing
 {
+    if (_state == TNKRefreshControlStateRefreshing) {
+        return;
+    }
+    
     _state = TNKRefreshControlStateRefreshing;
     
     _activityIndicator.progress = 0.0;
@@ -183,6 +187,10 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 - (void)endRefreshing
 {
+    if (_state != TNKRefreshControlStateRefreshing) {
+        return;
+    }
+    
     [_activityIndicator stopAnimatingWithFadeAwayAnimation:YES completion:^{
         _state = TNKRefreshControlStateEnding;
     }];

@@ -110,16 +110,18 @@
 
 - (void)startAnimating
 {
-    _animating = YES;
-    
-    [self _updateProgress];
-    
-    CABasicAnimation *refreshingAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    refreshingAnimation.duration = 1.0;
-    refreshingAnimation.repeatCount = CGFLOAT_MAX;
-    refreshingAnimation.fromValue = @(-M_PI_2);
-    refreshingAnimation.toValue = @(M_PI * 2.0 - M_PI_2);
-    [_spinnerView.layer addAnimation:refreshingAnimation forKey:@"refreshing"];
+    if (!_animating) {
+        _animating = YES;
+        
+        [self _updateProgress];
+        
+        CABasicAnimation *refreshingAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+        refreshingAnimation.duration = 1.0;
+        refreshingAnimation.repeatCount = CGFLOAT_MAX;
+        refreshingAnimation.fromValue = @(-M_PI_2);
+        refreshingAnimation.toValue = @(M_PI * 2.0 - M_PI_2);
+        [_spinnerView.layer addAnimation:refreshingAnimation forKey:@"refreshing"];
+    }
 }
 
 - (void)stopAnimating
@@ -129,14 +131,24 @@
 
 - (void)stopAnimatingWithFadeAwayAnimation:(BOOL)animated completion:(void (^)())completion
 {
-    if (animated) {
-        [UIView animateWithDuration:0.2 delay:0.0 options:0 animations:^{
-            _spinnerView.alpha = 0.0;
-            _spinnerView.transform = CGAffineTransformScale(_spinnerView.transform, 0.1, 0.1);
-        } completion:^(BOOL finished) {
-            _spinnerView.alpha = 1.0;
-            _spinnerView.transform = _defaultTransform;
-            
+    if (_animating) {
+        if (animated) {
+            [UIView animateWithDuration:0.2 delay:0.0 options:0 animations:^{
+                _spinnerView.alpha = 0.0;
+                _spinnerView.transform = CGAffineTransformScale(_spinnerView.transform, 0.1, 0.1);
+            } completion:^(BOOL finished) {
+                _spinnerView.alpha = 1.0;
+                _spinnerView.transform = _defaultTransform;
+                
+                _animating = NO;
+                [_spinnerView.layer removeAnimationForKey:@"refreshing"];
+                [self _updateProgress];
+                
+                if (completion != nil) {
+                    completion();
+                }
+            }];
+        } else {
             _animating = NO;
             [_spinnerView.layer removeAnimationForKey:@"refreshing"];
             [self _updateProgress];
@@ -144,14 +156,6 @@
             if (completion != nil) {
                 completion();
             }
-        }];
-    } else {
-        _animating = NO;
-        [_spinnerView.layer removeAnimationForKey:@"refreshing"];
-        [self _updateProgress];
-        
-        if (completion != nil) {
-            completion();
         }
     }
 }

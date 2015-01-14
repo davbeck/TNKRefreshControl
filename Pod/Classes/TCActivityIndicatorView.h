@@ -35,6 +35,8 @@
  
  Use this method to control the fade away animation. When animated is YES, the view shrinks and fades away animated. When NO, it will immediately jump to displaying the current progress.
  
+ If the indicator is not animating, the completion block is never called.
+ 
  @param animated Whether to fade away with an animation.
  @param completion A completion block that is called when the fade away animation finishes.
  */
