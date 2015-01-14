@@ -136,7 +136,17 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
         draggingEndedAction();
     }
     
-    self.frame = CGRectMake(0.0, self.scrollView.contentOffset.y + self.scrollView.contentInset.top - self.addedContentInset.top,
+    CGFloat frameY = 0.0;
+    CGFloat lockedY = self.scrollView.contentOffset.y + self.scrollView.contentInset.top - self.addedContentInset.top;
+    if (_state == TNKRefreshControlStateWaiting) {
+        frameY = lockedY;
+    } else {
+        frameY = -TNKRefreshControlHeight;
+        if (lockedY < -TNKRefreshControlHeight) {
+            frameY = self.scrollView.contentOffset.y + self.scrollView.contentInset.top - self.addedContentInset.top;
+        }
+    }
+    self.frame = CGRectMake(0.0, frameY,
                             self.scrollView.bounds.size.width, TNKRefreshControlHeight);
     
     switch (_state) {
