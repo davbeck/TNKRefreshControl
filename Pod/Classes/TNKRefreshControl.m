@@ -141,11 +141,17 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     
     switch (_state) {
         case TNKRefreshControlStateWaiting: {
-            CGFloat percent = MAX(MIN(-self.frame.origin.y - 10.0, 75.0), 0.0) / 75.0;
+            CGFloat distance = -self.frame.origin.y - 10.0;
+            CGFloat percent = 0.0;
+            if (self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact) {
+                percent = pow(distance / 50.0, 2); // http://cl.ly/image/0O280G3C3H3M
+            } else {
+                percent = pow(2.0, distance / 60.0) - 1.0; // http://cl.ly/image/2r3y0h0Z0B01
+            }
             
             _activityIndicator.progress = percent;
             
-            if (-self.frame.origin.y > 100.0) {
+            if (percent >= 1.0) {
                 [self beginRefreshing];
                 [self sendActionsForControlEvents:UIControlEventValueChanged];
             }
@@ -193,6 +199,9 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     
     [_activityIndicator stopAnimatingWithFadeAwayAnimation:YES completion:^{
         _state = TNKRefreshControlStateEnding;
+        
+        // if we are at the very tippy top of the scroll view, this wouldn't get called in a way that would change the state back automatically
+        [self _layoutScrollView];
     }];
     
     _draggingEndedAction = nil;

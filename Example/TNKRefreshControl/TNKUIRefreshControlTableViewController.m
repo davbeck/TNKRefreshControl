@@ -24,7 +24,7 @@
     [super viewDidLoad];
     
     self.refreshControl = [[UIRefreshControl alloc] init];
-    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing"];
+//    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing"];
     [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     
     _dateSource = [TNKDateSource new];

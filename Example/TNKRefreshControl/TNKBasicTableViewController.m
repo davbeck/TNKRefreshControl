@@ -29,6 +29,7 @@
     [self.tableView.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     
     _dateSource = [TNKDateSource new];
+    _dateSource.dates = @[[NSDate date]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -45,11 +46,7 @@
     
     [_dateSource refresh:^(NSArray *dates) {
         [self.tableView.refreshControl endRefreshing];
-        
         [self.tableView reloadData];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
-            [self.tableView reloadData];
-        });
     }];
 }
 
