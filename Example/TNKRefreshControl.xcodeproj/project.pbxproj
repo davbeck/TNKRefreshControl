@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1177FA0D1A68226000055BC2 /* TNKAdvancedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177FA0C1A68226000055BC2 /* TNKAdvancedViewController.swift */; };
+		1177FA0F1A68354800055BC2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1177FA0E1A68354800055BC2 /* LaunchScreen.xib */; };
 		11DFEEF41A65A08C00355CBF /* TNKBasicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DFEEF31A65A08C00355CBF /* TNKBasicTableViewController.m */; };
 		11DFEEF71A65A15400355CBF /* TNKDateSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DFEEF61A65A15400355CBF /* TNKDateSource.swift */; };
 		11FBC6F81A65AC700052508D /* TNKUIRefreshControlTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FBC6F71A65AC700052508D /* TNKUIRefreshControlTableViewController.m */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		1177FA0C1A68226000055BC2 /* TNKAdvancedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TNKAdvancedViewController.swift; sourceTree = "<group>"; };
+		1177FA0E1A68354800055BC2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		11DFEEF21A65A08C00355CBF /* TNKBasicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNKBasicTableViewController.h; sourceTree = "<group>"; };
 		11DFEEF31A65A08C00355CBF /* TNKBasicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNKBasicTableViewController.m; sourceTree = "<group>"; };
 		11DFEEF51A65A15300355CBF /* TNKRefreshControl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TNKRefreshControl-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				11FBC6F71A65AC700052508D /* TNKUIRefreshControlTableViewController.m */,
 				11DFEEF61A65A15400355CBF /* TNKDateSource.swift */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
+				1177FA0E1A68354800055BC2 /* LaunchScreen.xib */,
 				6003F594195388D20070C39A /* Supporting Files */,
 				11DFEEF51A65A15300355CBF /* TNKRefreshControl-Bridging-Header.h */,
 			);
@@ -286,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1177FA0F1A68354800055BC2 /* LaunchScreen.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F5A1195388D20070C39A /* Main.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -502,11 +506,11 @@
 			baseConfigurationReference = 7409D832634A8B89FB93F3C4 /* Pods-TNKRefreshControl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TNKRefreshControl/TNKRefreshControl-Prefix.pch";
 				INFOPLIST_FILE = "TNKRefreshControl/TNKRefreshControl-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TNKRefreshControl/TNKRefreshControl-Bridging-Header.h";
@@ -520,11 +524,11 @@
 			baseConfigurationReference = 62C5ACF1DD42139C19DFAA68 /* Pods-TNKRefreshControl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TNKRefreshControl/TNKRefreshControl-Prefix.pch";
 				INFOPLIST_FILE = "TNKRefreshControl/TNKRefreshControl-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TNKRefreshControl/TNKRefreshControl-Bridging-Header.h";
