@@ -19,9 +19,22 @@
 
 /** Starts the animation of the progress indicator.
  
- When the progress indicator is animated, it spins to indicate indeterminate progress. The indicator is animated until `-stopAnimatingWithFadeAwayAnimation:completion:` is called.
+ Calls `-stopAnimatingWithFadeAwayAnimation:completion:` with YES if progress is 0, and with NO otherwise.
  */
 - (void)startAnimating;
+
+/** Starts the animation of the progress indicator.
+ 
+ When the progress indicator is animated, it spins to indicate indeterminate progress. The indicator is animated until `-stopAnimatingWithFadeAwayAnimation:completion:` is called.
+ 
+ Use this method to control the fade in animation. When animated is YES, the view grows and fades in animated. When NO, it will immediately jump to fullsize.
+ 
+ If the indicator is already animating, the completion block is never called.
+ 
+ @param animated Whether to fade in with an animation.
+ @param completion A completion block that is called when the fade in animation finishes.
+ */
+- (void)startAnimatingWithFadeInAnimation:(BOOL)animated completion:(void (^)())completion;
 
 /** Stops the animation of the progress indicator.
  

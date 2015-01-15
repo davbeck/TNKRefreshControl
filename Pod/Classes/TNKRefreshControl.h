@@ -14,9 +14,20 @@
  
  Call this method when an external event source triggers a programmatic refresh of your table. For example, if you use an NSTimer object to refresh the contents of the table view periodically, you would call this method as part of your timer handler. This method updates the state of the refresh control to reflect the in-progress refresh operation. When the refresh operation ends, be sure to call the endRefreshing method to return the control to its default state.
  
+ Internally, this method calls `beginRefreshingVisibly:animated:` with visibly set to YES when the scrollView is at the top and animated YES.
+ 
  It is safe to call this even when a refresh was triggered by the user.
  */
 - (void)beginRefreshing;
+
+/** Tells the control that a refresh operation was started programmatically.
+ 
+ Similar to beginRefreshing, this method allows you to begin refreshing programatically. In addition, it automatically scrolls the control into view when visibly is YES.
+ 
+ @param visibly Whether to scroll the control into view.
+ @param animated If visibly is YES, controls scrolling animation.
+ */
+- (void)beginRefreshingVisibly:(BOOL)visibly animated:(BOOL)animated;
 
 /** Tells the control that a refresh operation has ended.
  

@@ -93,6 +93,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Pull to Refresh" id="kPF-n6-3RV">
+                        <barButtonItem key="leftBarButtonItem" title="Refresh" id="lsp-wA-pkt">
+                            <connections>
+                                <action selector="refresh:" destination="7gi-UV-cwb" id="s5o-ln-PyW"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Clear" id="5Dt-Vb-wPN"/>
                     </navigationItem>
                 </tableViewController>
@@ -149,6 +154,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Pull to Refresh" id="bRz-sx-sn8">
+                        <barButtonItem key="leftBarButtonItem" title="Refresh" id="Hef-0j-WFV">
+                            <connections>
+                                <action selector="refresh:" destination="2cz-TB-TXS" id="bWr-5Q-avd"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Clear" id="HdY-U2-j5d"/>
                     </navigationItem>
                 </tableViewController>

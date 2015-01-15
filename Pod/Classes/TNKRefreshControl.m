@@ -150,7 +150,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
             _activityIndicator.progress = percent;
             
             if (percent >= 1.0) {
-                [self beginRefreshing];
+                [self beginRefreshingVisibly:NO animated:NO];
                 [self sendActionsForControlEvents:UIControlEventValueChanged];
             }
             
@@ -170,6 +170,13 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 - (void)beginRefreshing
 {
+    BOOL show = self.scrollView.contentOffset.y <= -self.scrollView.contentInset.top && !self.scrollView.dragging;
+    
+    [self beginRefreshingVisibly:show animated:show];
+}
+
+- (void)beginRefreshingVisibly:(BOOL)visibly animated:(BOOL)animated
+{
     if (_state == TNKRefreshControlStateRefreshing) {
         return;
     }
@@ -177,15 +184,20 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     _state = TNKRefreshControlStateRefreshing;
     
     _activityIndicator.progress = 0.0;
-    [_activityIndicator startAnimating];
+    [_activityIndicator startAnimatingWithFadeInAnimation:animated completion:nil];
+    if (visibly) {
+        CGPoint contentOffset = self.scrollView.contentOffset;
+        contentOffset.y = -self.scrollView.contentInset.top - self.frame.size.height;
+        [self.scrollView setContentOffset:contentOffset animated:animated];
+    }
     
     if (self.scrollView.dragging) {
         __weak __typeof(self)self_weak = self;
         _draggingEndedAction = ^{
-            self_weak.addedContentInset = UIEdgeInsetsMake(44.0, 0.0, 0.0, 0.0);
+            self_weak.addedContentInset = UIEdgeInsetsMake(self_weak.frame.size.height, 0.0, 0.0, 0.0);
         };
     } else {
-        self.addedContentInset = UIEdgeInsetsMake(44.0, 0.0, 0.0, 0.0);
+        self.addedContentInset = UIEdgeInsetsMake(self.frame.size.height, 0.0, 0.0, 0.0);
     }
 }
 
@@ -209,6 +221,8 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
         };
     } else {
         _draggingEndedAction = nil;
+        
+        // using setContentOffset:animated: and reloadData don't play well with each other
         [UIView animateWithDuration:0.3 animations:^{
             [self setAddedContentInset:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
             if (self.scrollView.contentOffset.y < -self.scrollView.contentInset.top && !self.scrollView.dragging) {
