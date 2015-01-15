@@ -72,12 +72,8 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 {
     self.addedContentInset = UIEdgeInsetsZero;
     
-    [_scrollView removeObserver:self forKeyPath:@"contentOffset" context:TNKScrollViewContext];
-    
     _scrollView = scrollView;
     [self _layoutScrollView];
-    
-    [_scrollView addObserver:self forKeyPath:@"contentOffset" options:0 context:TNKScrollViewContext];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -103,6 +99,30 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     }
     
     return self;
+}
+
+- (UIScrollView *)_scrollViewForSuperview:(UIView *)superview
+{
+    UIScrollView *scrollView = superview;
+    while (scrollView != nil && ![scrollView isKindOfClass:[UIScrollView class]]) {
+        scrollView = scrollView.superview;
+    }
+    
+    return scrollView;
+}
+
+- (void)willMoveToSuperview:(UIView *)newSuperview
+{
+    [super willMoveToSuperview:newSuperview];
+    
+    // our weak property is usually niled out by the time this is called, but odly self.superview is still correct
+    UIScrollView *oldScrollView = [self _scrollViewForSuperview:self.superview];
+    [oldScrollView removeObserver:self forKeyPath:@"contentOffset" context:TNKScrollViewContext];
+    
+    UIScrollView *scrollView = [self _scrollViewForSuperview:newSuperview];
+    [scrollView addObserver:self forKeyPath:@"contentOffset" options:0 context:TNKScrollViewContext];
+    
+    self.scrollView = scrollView;
 }
 
 - (void)layoutSubviews
@@ -243,10 +263,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 - (void)setRefreshControl:(TNKRefreshControl *)refreshControl
 {
-    self.refreshControl.scrollView = nil;
     [self.refreshControl removeFromSuperview];
-    
-    refreshControl.scrollView = self;
     
     objc_setAssociatedObject(self, @selector(refreshControl), refreshControl, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
