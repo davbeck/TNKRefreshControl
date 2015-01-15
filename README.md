@@ -1,6 +1,5 @@
 # TNKRefreshControl
 
-[![CI Status](http://img.shields.io/travis/David Beck/TNKRefreshControl.svg?style=flat)](https://travis-ci.org/David Beck/TNKRefreshControl)
 [![Version](https://img.shields.io/cocoapods/v/TNKRefreshControl.svg?style=flat)](http://cocoadocs.org/docsets/TNKRefreshControl)
 [![License](https://img.shields.io/cocoapods/l/TNKRefreshControl.svg?style=flat)](http://cocoadocs.org/docsets/TNKRefreshControl)
 [![Platform](https://img.shields.io/cocoapods/p/TNKRefreshControl.svg?style=flat)](http://cocoadocs.org/docsets/TNKRefreshControl)
