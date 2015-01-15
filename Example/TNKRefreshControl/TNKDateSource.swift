@@ -9,6 +9,8 @@
 import UIKit
 
 
+private let TimeInterval = 5.0
+
 extension NSTimer {
     class func scheduledTimerWithTimeInterval(interval: NSTimeInterval, repeats: Bool, handler: NSTimer! -> Void) -> NSTimer {
         let fireDate = interval + CFAbsoluteTimeGetCurrent()
@@ -20,38 +22,19 @@ extension NSTimer {
 }
 
 class TNKDateSource: NSObject {
-    var dates: [NSDate] = []
+    var objects: [AnyObject] = []
+    private var highestNumber = 0
     
-    func refresh(completed: (dates: [NSDate]) -> ()) {
+    func loadNewObjects(completed: (newObjects: [AnyObject]) -> ()) {
         NSTimer.scheduledTimerWithTimeInterval(3.0, repeats: false) { (timer) in
-            var newDates: [NSDate] = []
-            for i in 0..<20 {
-                newDates.append(NSDate(timeIntervalSinceNow: NSTimeInterval(i) * 30.0))
+            var newObjects: [AnyObject] = []
+            for i in 0..<5 {
+                self.highestNumber++
+                newObjects.insert(self.highestNumber, atIndex: 0)
             }
             
-            self.dates = newDates
-            completed(dates: newDates)
-        }
-    }
-    
-    func loadNewDates(completed: (dates: [NSDate]) -> ()) {
-        if let sinceDate = self.dates.first {
-            let toDate = NSDate()
-            
-            NSTimer.scheduledTimerWithTimeInterval(5.0, repeats: false) { (timer) in
-                var newDates: [NSDate] = []
-                var i: NSTimeInterval = sinceDate.timeIntervalSince1970 + 30.0
-                while i < toDate.timeIntervalSince1970 {
-                    newDates.append(NSDate(timeIntervalSince1970: i))
-                    
-                    i += 30.0
-                }
-                
-                self.dates += newDates
-                completed(dates: newDates)
-            }
-        } else {
-            self.refresh(completed)
+            self.objects = newObjects + self.objects
+            completed(newObjects: newObjects)
         }
     }
 }

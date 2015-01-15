@@ -44,12 +44,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     return _state == TNKRefreshControlStateRefreshing;
 }
 
-- (void)setAddedContentInset:(UIEdgeInsets)addedContentInset
-{
-    [self setAddedContentInset:addedContentInset animated:NO];
-}
-
-- (void)setAddedContentInset:(UIEdgeInsets)addedInsets animated:(BOOL)animated
+- (void)setAddedContentInset:(UIEdgeInsets)addedInsets
 {
     if (!UIEdgeInsetsEqualToEdgeInsets(_addedContentInset, addedInsets)) {
         UIEdgeInsets contentInset = self.scrollView.contentInset;
@@ -68,15 +63,8 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
         
         _addedContentInset = addedInsets;
         
-        if (animated) {
-            [UIView animateWithDuration:0.3 delay:0.0 usingSpringWithDamping:1.0 initialSpringVelocity:0.0 options:0 animations:^{
-                self.scrollView.contentInset = contentInset;
-                self.scrollView.contentOffset = contentOffset;
-            } completion:nil];
-        } else {
-            self.scrollView.contentInset = contentInset;
-            self.scrollView.contentOffset = contentOffset;
-        }
+        self.scrollView.contentInset = contentInset;
+        self.scrollView.contentOffset = contentOffset;
     }
 }
 
@@ -214,12 +202,21 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
         [self _layoutScrollView];
     }];
     
-    _draggingEndedAction = nil;
-    [self setAddedContentInset:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0) animated:YES];
-    if (self.scrollView.contentOffset.y < -self.scrollView.contentInset.top && !self.scrollView.dragging) {
-        CGPoint contentOffset = self.scrollView.contentOffset;
-        contentOffset.y = -self.scrollView.contentInset.top;
-        [self.scrollView setContentOffset:contentOffset animated:YES];
+    if (self.scrollView.dragging) {
+        __weak __typeof(self)self_weak = self;
+        _draggingEndedAction = ^{
+            [self_weak setAddedContentInset:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
+        };
+    } else {
+        _draggingEndedAction = nil;
+        [UIView animateWithDuration:0.3 animations:^{
+            [self setAddedContentInset:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
+            if (self.scrollView.contentOffset.y < -self.scrollView.contentInset.top && !self.scrollView.dragging) {
+                CGPoint contentOffset = self.scrollView.contentOffset;
+                contentOffset.y = -self.scrollView.contentInset.top;
+                [self.scrollView setContentOffset:contentOffset animated:NO];
+            }
+        }];
     }
 }
 

@@ -15,7 +15,7 @@
 
 @interface TNKBasicTableViewController ()
 {
-    TNKDateSource *_dateSource;
+    TNKDateSource *_objectSource;
 }
 
 @end
@@ -28,12 +28,14 @@
     self.tableView.refreshControl = [TNKRefreshControl new];
     [self.tableView.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     
-    _dateSource = [TNKDateSource new];
-    _dateSource.dates = @[[NSDate date]];
+    _objectSource = [TNKDateSource new];
+    _objectSource.objects = @[[NSDate date]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [self.tableView.refreshControl beginRefreshing];
     
     [self refresh:nil];
 }
@@ -44,8 +46,9 @@
 - (IBAction)refresh:(id)sender {
     [self.tableView.refreshControl beginRefreshing];
     
-    [_dateSource refresh:^(NSArray *dates) {
+    [_objectSource loadNewObjects:^(NSArray *newDates) {
         [self.tableView.refreshControl endRefreshing];
+        
         [self.tableView reloadData];
     }];
 }
@@ -58,13 +61,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _dateSource.dates.count;
+    return _objectSource.objects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DateCell" forIndexPath:indexPath];
     
-    NSDate *date = _dateSource.dates[indexPath.row];
+    NSDate *date = _objectSource.objects[indexPath.row];
     cell.textLabel.text = date.description;
     
     return cell;
