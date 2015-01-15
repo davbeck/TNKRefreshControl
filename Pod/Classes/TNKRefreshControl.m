@@ -70,6 +70,8 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 - (void)setScrollView:(UIScrollView *)scrollView
 {
+    self.addedContentInset = UIEdgeInsetsZero;
+    
     [_scrollView removeObserver:self forKeyPath:@"contentOffset" context:TNKScrollViewContext];
     
     _scrollView = scrollView;
@@ -241,6 +243,9 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 - (void)setRefreshControl:(TNKRefreshControl *)refreshControl
 {
+    self.refreshControl.scrollView = nil;
+    [self.refreshControl removeFromSuperview];
+    
     refreshControl.scrollView = self;
     
     objc_setAssociatedObject(self, @selector(refreshControl), refreshControl, OBJC_ASSOCIATION_RETAIN_NONATOMIC);

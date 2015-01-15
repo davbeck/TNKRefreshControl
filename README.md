@@ -5,27 +5,40 @@
 [![License](https://img.shields.io/cocoapods/l/TNKRefreshControl.svg?style=flat)](http://cocoadocs.org/docsets/TNKRefreshControl)
 [![Platform](https://img.shields.io/cocoapods/p/TNKRefreshControl.svg?style=flat)](http://cocoadocs.org/docsets/TNKRefreshControl)
 
-## Limitations of UIRefreshControl
-
-### `attributedTitle` Offset
-
-![attributedTitle offset](http://f.cl.ly/items/1t460h0Y322v3q3c093G/iOS%20Simulator%20Screen%20Shot%20Jan%2013,%202015,%2011.35.55%20AM.png)
-
-When `attributedTitle` is set, the offset for the table view is too large. This is fixed if you call `beginRefreshing` from `viewWillAppear:`.
-
+TNKRefreshControl is a replacement for UIRefreshControl that can be used with any UIScrollView
+and uses a more modern look.
 
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+Instead of setting refreshControl on a UITableViewController, you create and set a TNKRefreshControl on any UIScrollView or UIScrollView subclass like UITableView.
+
+```objc
+self.tableView.refreshControl = [TNKRefreshControl new];
+[self.tableView.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+```
+
+From there, you can programatically activate the refresh control programatically with `beginRefreshing`. When you have finished loading content, make sure to call `endRefreshing`.
+
+```objc
+- (IBAction)refresh:(id)sender {
+    [self.tableView.refreshControl beginRefreshing];
+    
+    [_objectSource loadNewObjects:^(NSArray *newDates) {
+        [self.tableView.refreshControl endRefreshing];
+        
+        [self.tableView reloadData];
+    }];
+}
+```
 
 ## Installation
 
 TNKRefreshControl is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-    pod "TNKRefreshControl"
+    pod "TNKRefreshControl", "~> 0.1"
 
 ## Author
 
