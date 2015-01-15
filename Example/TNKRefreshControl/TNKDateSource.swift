@@ -22,12 +22,12 @@ extension NSTimer {
 }
 
 class TNKDateSource: NSObject {
-    var objects: [AnyObject] = []
+    var objects: [NSObject] = []
     private var highestNumber = 0
     
-    func loadNewObjects(completed: (newObjects: [AnyObject]) -> ()) {
+    func loadNewObjects(completed: (newObjects: [NSObject]) -> ()) {
         NSTimer.scheduledTimerWithTimeInterval(3.0, repeats: false) { (timer) in
-            var newObjects: [AnyObject] = []
+            var newObjects: [NSObject] = []
             for i in 0..<5 {
                 self.highestNumber++
                 newObjects.insert(self.highestNumber, atIndex: 0)

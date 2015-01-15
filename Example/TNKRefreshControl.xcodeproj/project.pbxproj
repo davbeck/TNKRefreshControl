@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1177FA0D1A68226000055BC2 /* TNKAdvancedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177FA0C1A68226000055BC2 /* TNKAdvancedViewController.swift */; };
 		11DFEEF41A65A08C00355CBF /* TNKBasicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DFEEF31A65A08C00355CBF /* TNKBasicTableViewController.m */; };
 		11DFEEF71A65A15400355CBF /* TNKDateSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DFEEF61A65A15400355CBF /* TNKDateSource.swift */; };
 		11FBC6F81A65AC700052508D /* TNKUIRefreshControlTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FBC6F71A65AC700052508D /* TNKUIRefreshControlTableViewController.m */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1177FA0C1A68226000055BC2 /* TNKAdvancedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TNKAdvancedViewController.swift; sourceTree = "<group>"; };
 		11DFEEF21A65A08C00355CBF /* TNKBasicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNKBasicTableViewController.h; sourceTree = "<group>"; };
 		11DFEEF31A65A08C00355CBF /* TNKBasicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNKBasicTableViewController.m; sourceTree = "<group>"; };
 		11DFEEF51A65A15300355CBF /* TNKRefreshControl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TNKRefreshControl-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				6003F59F195388D20070C39A /* Main.storyboard */,
 				11DFEEF21A65A08C00355CBF /* TNKBasicTableViewController.h */,
 				11DFEEF31A65A08C00355CBF /* TNKBasicTableViewController.m */,
+				1177FA0C1A68226000055BC2 /* TNKAdvancedViewController.swift */,
 				11FBC6F61A65AC700052508D /* TNKUIRefreshControlTableViewController.h */,
 				11FBC6F71A65AC700052508D /* TNKUIRefreshControlTableViewController.m */,
 				11DFEEF61A65A15400355CBF /* TNKDateSource.swift */,
@@ -367,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1177FA0D1A68226000055BC2 /* TNKAdvancedViewController.swift in Sources */,
 				6003F59E195388D20070C39A /* TNKAppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				11DFEEF71A65A15400355CBF /* TNKDateSource.swift in Sources */,
