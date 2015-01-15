@@ -8,6 +8,8 @@
 TNKRefreshControl is a replacement for UIRefreshControl that can be used with any UIScrollView
 and uses a more modern look.
 
+[![Screenshot](http://zippy.gfycat.com/BlackandwhiteUnevenIndianspinyloach.gif)](http://cl.ly/0R1n0f2D3S3Z)
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

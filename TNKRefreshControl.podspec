@@ -1,27 +1,12 @@
-#
-# Be sure to run `pod lib lint TNKRefreshControl.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# Any lines starting with a # are optional, but encouraged
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "TNKRefreshControl"
   s.version          = "0.1.0"
-  s.summary          = "A short description of TNKRefreshControl."
-  s.description      = <<-DESC
-                       An optional longer description of TNKRefreshControl
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/TNKRefreshControl"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.summary          = "A replacement for UIRefreshControl with a more modern look and more flexibility."
+  s.homepage         = "https://github.com/davbeck/TNKRefreshControl"
+  s.screenshots     = "http://zippy.gfycat.com/BlackandwhiteUnevenIndianspinyloach.gif", "http://f.cl.ly/items/2l183G2a0l0U30033L3v/iOS%20Simulator%20Screen%20Shot%20Jan%2014,%202015,%205.37.25%20PM.png", "http://f.cl.ly/items/1W223R1I3028002y350B/iOS%20Simulator%20Screen%20Shot%20Jan%2014,%202015,%205.37.30%20PM.png"
   s.license          = 'MIT'
   s.author           = { "David Beck" => "code@thinkultimate.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/TNKRefreshControl.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/davbeck/TNKRefreshControl.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
