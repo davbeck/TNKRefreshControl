@@ -103,9 +103,9 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 - (UIScrollView *)_scrollViewForSuperview:(UIView *)superview
 {
-    UIScrollView *scrollView = superview;
+    UIScrollView *scrollView = (UIScrollView *)superview;
     while (scrollView != nil && ![scrollView isKindOfClass:[UIScrollView class]]) {
-        scrollView = scrollView.superview;
+        scrollView = (UIScrollView *)scrollView.superview;
     }
     
     return scrollView;
