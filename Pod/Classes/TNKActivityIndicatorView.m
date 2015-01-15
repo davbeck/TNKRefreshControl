@@ -1,12 +1,12 @@
 //
-//  TCActivityIndicatorView.m
+//  TNKActivityIndicatorView.m
 //  Pods
 //
 //  Created by David Beck on 1/13/15.
 //
 //
 
-#import "TCActivityIndicatorView.h"
+#import "TNKActivityIndicatorView.h"
 
 #import <CKShapeView/CKShapeView.h>
 
@@ -14,7 +14,7 @@
 #define TNKActivityIndicatorViewLineWidth (2.0)
 
 
-@interface TCActivityIndicatorView ()
+@interface TNKActivityIndicatorView ()
 {
     CKShapeView *_spinnerView;
     CGAffineTransform _defaultTransform;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation TCActivityIndicatorView
+@implementation TNKActivityIndicatorView
 
 #pragma mark - Properties
 

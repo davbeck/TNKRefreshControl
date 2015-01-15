@@ -10,7 +10,7 @@
 
 #import <objc/runtime.h>
 
-#import "TCActivityIndicatorView.h"
+#import "TNKActivityIndicatorView.h"
 
 
 #define TNKRefreshControlHeight 44.0
@@ -27,7 +27,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 @interface TNKRefreshControl ()
 {
-    TCActivityIndicatorView *_activityIndicator;
+    TNKActivityIndicatorView *_activityIndicator;
     void(^_draggingEndedAction)();
     TNKRefreshControlState _state;
 }
@@ -95,7 +95,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     if (self != nil) {
 //        self.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.1];
         
-        _activityIndicator = [TCActivityIndicatorView new];
+        _activityIndicator = [TNKActivityIndicatorView new];
         [self addSubview:_activityIndicator];
 //        _activityIndicator.backgroundColor = [UIColor greenColor];
     }

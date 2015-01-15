@@ -1,5 +1,5 @@
 //
-//  TCActivityIndicatorView.h
+//  TNKActivityIndicatorView.h
 //  Pods
 //
 //  Created by David Beck on 1/13/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TCActivityIndicatorView : UIView
+@interface TNKActivityIndicatorView : UIView
 
 /** The current progress indicated when not animating
  

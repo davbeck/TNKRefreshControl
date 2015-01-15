@@ -1,2626 +1,1185 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>00142D2D98D4E62849886D81</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-TNKRefreshControl-CKShapeView</string>
-			<key>target</key>
-			<string>82054095C58E9ACF6180EFB9</string>
-			<key>targetProxy</key>
-			<string>04F180FB342945AFF6E636B8</string>
-		</dict>
-		<key>029CF8AFAB38A71E8B179BA3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1FA19FECF95B5E8323B6BD47</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>04F180FB342945AFF6E636B8</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5A505A95DC0750BCFB89BE86</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>82054095C58E9ACF6180EFB9</string>
-			<key>remoteInfo</key>
-			<string>Pods-TNKRefreshControl-CKShapeView</string>
-		</dict>
-		<key>05B45DB8F0C4B9B7ADBD7BA9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Tests-CKShapeView.xcconfig</string>
-			<key>path</key>
-			<string>../Pods-Tests-CKShapeView/Pods-Tests-CKShapeView.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0874B3518476497584E0E6E0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5812248A1B1A1438977999FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0B7A005BBA554D70A076BE1D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5375962528C730BC7AB03277</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0C5F1084643AA3DA067743F1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-Tests-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0D9F747D6166AEBD3FF2CAA5</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>7F8825D743B50C6AEA8267DD</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>1137B7CD57993D1B22965D3F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-Tests-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>119C26C6C60908EF5CC35E68</key>
-		<dict>
-			<key>fileRef</key>
-			<string>26B9F1E08040084D4D87ACBB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>121AF695C6087DA67BC05DD8</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>TNKRefreshControl.bundle</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>16EBCC8253230E793CCE7AA2</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A90267DDDD42C7E294BA568D</string>
-				<string>0D9F747D6166AEBD3FF2CAA5</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>177978D34060AF9B47BD478D</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>18668B412A675B7B38FB9AE7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18B7913ED4413A267C0A2A8A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>54C15DFCE536D9A515DBDB7F</string>
-				<string>E63D54B88C101CC18E03DA5F</string>
-				<string>1137B7CD57993D1B22965D3F</string>
-				<string>CCE11EFEB8D1701741F609FB</string>
-				<string>0C5F1084643AA3DA067743F1</string>
-				<string>A00741F49A3617285D7B0719</string>
-				<string>7F8825D743B50C6AEA8267DD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-Tests</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-Tests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A0F5D35B195D8FB2574A949</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>16EBCC8253230E793CCE7AA2</string>
-			<key>buildPhases</key>
-			<array>
-				<string>45B6345AB7F1CBA50667FC3E</string>
-				<string>42C7C114288E98A3AA92E19A</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>51E613F5B6272D91A0FCCCF0</string>
-				<string>4967D8D63A912207C2BEFE8D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-Tests</string>
-			<key>productName</key>
-			<string>Pods-Tests</string>
-			<key>productReference</key>
-			<string>3AF1DA8B9E75302CAC79D7D9</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>1C03CA6E60A44592FF05B9CD</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>6F86A02885CBE99060BFA83D</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>1FA19FECF95B5E8323B6BD47</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>2319CDF84F6B0C42BEE20D2B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5812248A1B1A1438977999FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>26616F8CB4FE533E1ADD493C</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-TNKRefreshControl-TNKRefreshControl.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>26B9F1E08040084D4D87ACBB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>Pods-Tests-TNKRefreshControl-dummy.m</string>
-			<key>path</key>
-			<string>../Pods-Tests-TNKRefreshControl/Pods-Tests-TNKRefreshControl-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>285D5AB40B97A4B2EA34B425</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5A505A95DC0750BCFB89BE86</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>509FF21ECFA3EF2D67E23480</string>
-			<key>remoteInfo</key>
-			<string>Pods-Tests-CKShapeView</string>
-		</dict>
-		<key>2B1844C7FC4D35AB6B2FBE2F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>52F7CC59624516E7EC073BC2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2F591271805C962D327423BA</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A41BEC3D802A504414EDB792</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-Tests-CKShapeView/Pods-Tests-CKShapeView-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>2FA07C9073C3B604474BA569</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FCCEC05C60A74038508BBFDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>31F4AE690CAEDF1317D25433</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5A505A95DC0750BCFB89BE86</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>82054095C58E9ACF6180EFB9</string>
-			<key>remoteInfo</key>
-			<string>Pods-TNKRefreshControl-CKShapeView</string>
-		</dict>
-		<key>329E7A5DFCA297E60F5EDB69</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18668B412A675B7B38FB9AE7</string>
-				<string>B6BDD566A787C57930FEDCF4</string>
-				<string>FB0B75FF87AF1317BF6B3C81</string>
-				<string>46BDD71217A8167ECEEFBB52</string>
-				<string>F971FE0D5214B044A2ADBE64</string>
-				<string>6F86A02885CBE99060BFA83D</string>
-				<string>5C7191142D7706C9B005716F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-TNKRefreshControl</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-TNKRefreshControl</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>32B2FAA51797E5DF72C97969</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2319CDF84F6B0C42BEE20D2B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3338D5031AC4847DC02D8AEE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>QuartzCore.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>337AD36AD15512DA2639DD08</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2FA07C9073C3B604474BA569</string>
-				<string>EEA795526F5A2D29720DC9ED</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>33E7E24F3F46B6E86FBCD5A5</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E3A7CC4DEE7040F48AC046CE</string>
-				<string>2F591271805C962D327423BA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>356E157C5BFDE09B6C349343</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5812248A1B1A1438977999FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>372EEB71E465A80F69FE3D73</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>Pods-Tests-CKShapeView-dummy.m</string>
-			<key>path</key>
-			<string>../Pods-Tests-CKShapeView/Pods-Tests-CKShapeView-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>377574233DBB6E6C2E44CD87</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>AF77ABD5B551BBECE9DAC068</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-Tests-TNKRefreshControl/Pods-Tests-TNKRefreshControl-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3AF1DA8B9E75302CAC79D7D9</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-Tests.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>3C801663D93189630430EC95</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>329E7A5DFCA297E60F5EDB69</string>
-				<string>18B7913ED4413A267C0A2A8A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3D00945309CD50902BAF362F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>FD7E9CEC0CE78076B4B77449</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-TNKRefreshControl-TNKRefreshControl/Pods-TNKRefreshControl-TNKRefreshControl-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>3F0E1FA9800B8864F69EC549</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-Tests-CKShapeView</string>
-			<key>target</key>
-			<string>509FF21ECFA3EF2D67E23480</string>
-			<key>targetProxy</key>
-			<string>91EAC85D0BF80288AEBC141F</string>
-		</dict>
-		<key>40924D9B7F4689B9BEAED4FE</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C57D11ED919D8533EA92C636</string>
-				<string>3D00945309CD50902BAF362F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>42C7C114288E98A3AA92E19A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>92173F7A01BF2BD3261A1928</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>457D759A6A912C2B1F048440</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-TNKRefreshControl.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>45B6345AB7F1CBA50667FC3E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D07ED5FA83CC2CCFC7ED7E8A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>46BDD71217A8167ECEEFBB52</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4967D8D63A912207C2BEFE8D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-Tests-TNKRefreshControl</string>
-			<key>target</key>
-			<string>F0CBB875C6E669AC09F2F80D</string>
-			<key>targetProxy</key>
-			<string>4EB28302073C2657C0C91B2F</string>
-		</dict>
-		<key>4C538EE3CEB3FA1A5A3FECC4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A93D849A354F25A396AB0C16</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4E24396AF948F59260ECD040</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>TNKRefreshControl</string>
-			<key>target</key>
-			<string>AAEE30CA076D7CC3D3129378</string>
-			<key>targetProxy</key>
-			<string>E8BA50C92CEF53BFE78B0A0F</string>
-		</dict>
-		<key>4EB28302073C2657C0C91B2F</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5A505A95DC0750BCFB89BE86</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>F0CBB875C6E669AC09F2F80D</string>
-			<key>remoteInfo</key>
-			<string>Pods-Tests-TNKRefreshControl</string>
-		</dict>
-		<key>509FF21ECFA3EF2D67E23480</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>33E7E24F3F46B6E86FBCD5A5</string>
-			<key>buildPhases</key>
-			<array>
-				<string>337AD36AD15512DA2639DD08</string>
-				<string>D71F48E357DAE76E61525354</string>
-				<string>E7DD94220B7662015CABF310</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-Tests-CKShapeView</string>
-			<key>productName</key>
-			<string>Pods-Tests-CKShapeView</string>
-			<key>productReference</key>
-			<string>80371FDA496B0327BC6D6E1A</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>50C496F7F7D0F5F9347BC05D</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>5C7191142D7706C9B005716F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>51E613F5B6272D91A0FCCCF0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-Tests-CKShapeView</string>
-			<key>target</key>
-			<string>509FF21ECFA3EF2D67E23480</string>
-			<key>targetProxy</key>
-			<string>285D5AB40B97A4B2EA34B425</string>
-		</dict>
-		<key>5203E4584CD912A2B93314E5</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>52F7CC59624516E7EC073BC2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl-TNKRefreshControl-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5375962528C730BC7AB03277</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>TCActivityIndicatorView.h</string>
-			<key>path</key>
-			<string>Pod/Classes/TCActivityIndicatorView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>54C15DFCE536D9A515DBDB7F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-Tests-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5812248A1B1A1438977999FF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>5A505A95DC0750BCFB89BE86</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>D95D47128B4B2069B2F29202</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>D18D6B54FCC3D3E2AE1ACD56</string>
-			<key>productRefGroup</key>
-			<string>99F9672E6866AF7A2172C09C</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>DF5CF08B0D519E0D5D37FE1F</string>
-				<string>82054095C58E9ACF6180EFB9</string>
-				<string>C2772774F1E39B6851D4F98D</string>
-				<string>1A0F5D35B195D8FB2574A949</string>
-				<string>509FF21ECFA3EF2D67E23480</string>
-				<string>F0CBB875C6E669AC09F2F80D</string>
-				<string>AAEE30CA076D7CC3D3129378</string>
-			</array>
-		</dict>
-		<key>5C7191142D7706C9B005716F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5D1D4515488FB6A1E5F60AA1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0B7A005BBA554D70A076BE1D</string>
-				<string>9F916A8A1FDBE863CAC81B95</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5D8F30F623B57F1EBF81FC8D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CE78D287A40C70E47F0F70AF</string>
-				<string>A2F1D01709FB76B0B5AFF047</string>
-				<string>81D5BA85585D159E1D213BCC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>60A118B52F7C479E90E4B514</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-TNKRefreshControl-TNKRefreshControl</string>
-			<key>target</key>
-			<string>C2772774F1E39B6851D4F98D</string>
-			<key>targetProxy</key>
-			<string>A8659FC25A70C9EB1762CC57</string>
-		</dict>
-		<key>61DA2F6FD7D5411C9C53B604</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>9DEF64B0D4D1601E61CD7365</string>
-				<string>6A63F8588FD38E2222544D97</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>6331D106BC7912E0630D052C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F8357157BA791F7762A51C50</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Development Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63A545D7C6C5202A34BE6EC9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl-CKShapeView.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6414AE4C20C76CEC856FC3E9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A93D849A354F25A396AB0C16</string>
-				<string>FCCEC05C60A74038508BBFDF</string>
-				<string>B67705F3F9DF0386AFC7ED33</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>CKShapeView</string>
-			<key>path</key>
-			<string>CKShapeView</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6623F9C75D6CAA43C7635840</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Pods-Tests-TNKRefreshControl-prefix.pch</string>
-			<key>path</key>
-			<string>../Pods-Tests-TNKRefreshControl/Pods-Tests-TNKRefreshControl-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6A63F8588FD38E2222544D97</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F32324C0EC10D6AF7EB613BE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-TNKRefreshControl-CKShapeView/Pods-TNKRefreshControl-CKShapeView-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>6EDB8FE267CE4D59E138EFBE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DB0D1C2B4258F38D4F7361C5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>6F86A02885CBE99060BFA83D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7070283E279AE7735FA9CA85</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-TNKRefreshControl-CKShapeView.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>79A2D15C45B78D0D49826AA6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A93D849A354F25A396AB0C16</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7C09DE1190A121021AED0230</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>1C03CA6E60A44592FF05B9CD</string>
-				<string>50C496F7F7D0F5F9347BC05D</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7F8825D743B50C6AEA8267DD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Tests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>80371FDA496B0327BC6D6E1A</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-Tests-CKShapeView.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>8037D55BD55914913CB102EA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>81D5BA85585D159E1D213BCC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1FA19FECF95B5E8323B6BD47</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>82054095C58E9ACF6180EFB9</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>61DA2F6FD7D5411C9C53B604</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C49E24E25E6118F6DCAF9F59</string>
-				<string>5D8F30F623B57F1EBF81FC8D</string>
-				<string>97E7EDB1FF044A1F1599682F</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-TNKRefreshControl-CKShapeView</string>
-			<key>productName</key>
-			<string>Pods-TNKRefreshControl-CKShapeView</string>
-			<key>productReference</key>
-			<string>7070283E279AE7735FA9CA85</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>83C8D22554D795426792CADA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3338D5031AC4847DC02D8AEE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>846D7B5BCE17379077512CDF</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>85169076863AA1936275419B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0874B3518476497584E0E6E0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>879FF5152C68A4EAF6C8E515</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl-TNKRefreshControl.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90109BE579658D02F7AA0FA6</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>119C26C6C60908EF5CC35E68</string>
-				<string>B4FDE0682DE64A1DC7A357F2</string>
-				<string>98306D15C98854C73C991807</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>9068FDBF9800DEAD8BE0CEE9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B0A5763DF2AA340F7AC4F58C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>91EAC85D0BF80288AEBC141F</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5A505A95DC0750BCFB89BE86</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>509FF21ECFA3EF2D67E23480</string>
-			<key>remoteInfo</key>
-			<string>Pods-Tests-CKShapeView</string>
-		</dict>
-		<key>92173F7A01BF2BD3261A1928</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5812248A1B1A1438977999FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>924EABFEBBB0D36AE1BC38BE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>97B0FBCB7AB597F02F44F0E4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl-TNKRefreshControl-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>97E7EDB1FF044A1F1599682F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4C538EE3CEB3FA1A5A3FECC4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>98306D15C98854C73C991807</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F2D0573376DE766C06D76E63</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>99F9672E6866AF7A2172C09C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>121AF695C6087DA67BC05DD8</string>
-				<string>457D759A6A912C2B1F048440</string>
-				<string>7070283E279AE7735FA9CA85</string>
-				<string>26616F8CB4FE533E1ADD493C</string>
-				<string>3AF1DA8B9E75302CAC79D7D9</string>
-				<string>80371FDA496B0327BC6D6E1A</string>
-				<string>C0E79E180139078FD0A791E3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9DEF64B0D4D1601E61CD7365</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F32324C0EC10D6AF7EB613BE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-TNKRefreshControl-CKShapeView/Pods-TNKRefreshControl-CKShapeView-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>9F916A8A1FDBE863CAC81B95</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B0A5763DF2AA340F7AC4F58C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A00741F49A3617285D7B0719</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Tests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A2EE59FFB73BC0EF3975D71B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>6414AE4C20C76CEC856FC3E9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A2F1D01709FB76B0B5AFF047</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3338D5031AC4847DC02D8AEE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A41BEC3D802A504414EDB792</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Tests-CKShapeView-Private.xcconfig</string>
-			<key>path</key>
-			<string>../Pods-Tests-CKShapeView/Pods-Tests-CKShapeView-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A8659FC25A70C9EB1762CC57</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5A505A95DC0750BCFB89BE86</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>C2772774F1E39B6851D4F98D</string>
-			<key>remoteInfo</key>
-			<string>Pods-TNKRefreshControl-TNKRefreshControl</string>
-		</dict>
-		<key>A90267DDDD42C7E294BA568D</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A00741F49A3617285D7B0719</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>A93D849A354F25A396AB0C16</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CKShapeView.h</string>
-			<key>path</key>
-			<string>CKShapeView/CKShapeView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AAEE30CA076D7CC3D3129378</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>DC4B932FFC6AF0C9BF03EA04</string>
-			<key>buildPhases</key>
-			<array>
-				<string>924EABFEBBB0D36AE1BC38BE</string>
-				<string>FB2A56ADFFE249585975B441</string>
-				<string>AB7B2F6202A07BCD64DAAA60</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>TNKRefreshControl</string>
-			<key>productName</key>
-			<string>TNKRefreshControl</string>
-			<key>productReference</key>
-			<string>121AF695C6087DA67BC05DD8</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle</string>
-		</dict>
-		<key>AB7B2F6202A07BCD64DAAA60</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>AF2A5E95EE652F703B374F99</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>879FF5152C68A4EAF6C8E515</string>
-				<string>FD7E9CEC0CE78076B4B77449</string>
-				<string>52F7CC59624516E7EC073BC2</string>
-				<string>97B0FBCB7AB597F02F44F0E4</string>
-				<string>D7A982E0518767BB1066DD39</string>
-				<string>AF77ABD5B551BBECE9DAC068</string>
-				<string>26B9F1E08040084D4D87ACBB</string>
-				<string>6623F9C75D6CAA43C7635840</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>Example/Pods/Target Support Files/Pods-TNKRefreshControl-TNKRefreshControl</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AF77ABD5B551BBECE9DAC068</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Tests-TNKRefreshControl-Private.xcconfig</string>
-			<key>path</key>
-			<string>../Pods-Tests-TNKRefreshControl/Pods-Tests-TNKRefreshControl-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B0928B4C68A2623E6F21B8DC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F817821712CBB3EC3589C5EC</string>
-				<string>9068FDBF9800DEAD8BE0CEE9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B0A5763DF2AA340F7AC4F58C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>TNKRefreshControl.h</string>
-			<key>path</key>
-			<string>Pod/Classes/TNKRefreshControl.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B4887B9449033014FCAE1954</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>356E157C5BFDE09B6C349343</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B4EADFC08C469AB5C039A21D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5812248A1B1A1438977999FF</string>
-				<string>3338D5031AC4847DC02D8AEE</string>
-				<string>1FA19FECF95B5E8323B6BD47</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B4FDE0682DE64A1DC7A357F2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DE4948F11041A726F6A74299</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B67705F3F9DF0386AFC7ED33</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>63A545D7C6C5202A34BE6EC9</string>
-				<string>F32324C0EC10D6AF7EB613BE</string>
-				<string>D4D310F109B735A11759A689</string>
-				<string>D67BF4CD52B9B033ED5E2690</string>
-				<string>05B45DB8F0C4B9B7ADBD7BA9</string>
-				<string>A41BEC3D802A504414EDB792</string>
-				<string>372EEB71E465A80F69FE3D73</string>
-				<string>DE55F4BF97DFE6C177784FAA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-TNKRefreshControl-CKShapeView</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B6BDD566A787C57930FEDCF4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B98F59AAAB0A86FFC0905A08</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>TNKRefreshControl</string>
-			<key>target</key>
-			<string>AAEE30CA076D7CC3D3129378</string>
-			<key>targetProxy</key>
-			<string>E4920CF3CA2299D436F91334</string>
-		</dict>
-		<key>C0E79E180139078FD0A791E3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-Tests-TNKRefreshControl.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C2772774F1E39B6851D4F98D</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>40924D9B7F4689B9BEAED4FE</string>
-			<key>buildPhases</key>
-			<array>
-				<string>D5992A4F46437E7881B91405</string>
-				<string>B4887B9449033014FCAE1954</string>
-				<string>B0928B4C68A2623E6F21B8DC</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>00142D2D98D4E62849886D81</string>
-				<string>4E24396AF948F59260ECD040</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-TNKRefreshControl-TNKRefreshControl</string>
-			<key>productName</key>
-			<string>Pods-TNKRefreshControl-TNKRefreshControl</string>
-			<key>productReference</key>
-			<string>26616F8CB4FE533E1ADD493C</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>C3C7E1E4D28BCFE67D7B8B3F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C49E24E25E6118F6DCAF9F59</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F42CC23BEB28D7EBA5BA9EBA</string>
-				<string>FEEED50EF8F203416EDA29A7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C57D11ED919D8533EA92C636</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>FD7E9CEC0CE78076B4B77449</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-TNKRefreshControl-TNKRefreshControl/Pods-TNKRefreshControl-TNKRefreshControl-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C87E5898B0C158392043CF76</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-TNKRefreshControl-CKShapeView</string>
-			<key>target</key>
-			<string>82054095C58E9ACF6180EFB9</string>
-			<key>targetProxy</key>
-			<string>31F4AE690CAEDF1317D25433</string>
-		</dict>
-		<key>C89523EAD5BB6E00DB6D6053</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>377574233DBB6E6C2E44CD87</string>
-				<string>F186D17D1EF7CB365C9CEC04</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CCE11EFEB8D1701741F609FB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-Tests-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CE78D287A40C70E47F0F70AF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5812248A1B1A1438977999FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D07ED5FA83CC2CCFC7ED7E8A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1137B7CD57993D1B22965D3F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D18D6B54FCC3D3E2AE1ACD56</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8037D55BD55914913CB102EA</string>
-				<string>6331D106BC7912E0630D052C</string>
-				<string>E7B15C7D503B2609BE04DF09</string>
-				<string>A2EE59FFB73BC0EF3975D71B</string>
-				<string>99F9672E6866AF7A2172C09C</string>
-				<string>3C801663D93189630430EC95</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D1AF52104774638D5280F0FB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5812248A1B1A1438977999FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D36F9022D2B8CC941E133FCA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DE4948F11041A726F6A74299</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D4D310F109B735A11759A689</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl-CKShapeView-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D5992A4F46437E7881B91405</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2B1844C7FC4D35AB6B2FBE2F</string>
-				<string>D36F9022D2B8CC941E133FCA</string>
-				<string>DF6567AF90FECA61B870116C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D67BF4CD52B9B033ED5E2690</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl-CKShapeView-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D71F48E357DAE76E61525354</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D1AF52104774638D5280F0FB</string>
-				<string>83C8D22554D795426792CADA</string>
-				<string>029CF8AFAB38A71E8B179BA3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D7A982E0518767BB1066DD39</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Tests-TNKRefreshControl.xcconfig</string>
-			<key>path</key>
-			<string>../Pods-Tests-TNKRefreshControl/Pods-Tests-TNKRefreshControl.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D95D47128B4B2069B2F29202</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>177978D34060AF9B47BD478D</string>
-				<string>C3C7E1E4D28BCFE67D7B8B3F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>DB0D1C2B4258F38D4F7361C5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FB0B75FF87AF1317BF6B3C81</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DC4B932FFC6AF0C9BF03EA04</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>846D7B5BCE17379077512CDF</string>
-				<string>5203E4584CD912A2B93314E5</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>DE4948F11041A726F6A74299</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>TCActivityIndicatorView.m</string>
-			<key>path</key>
-			<string>Pod/Classes/TCActivityIndicatorView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DE55F4BF97DFE6C177784FAA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Pods-Tests-CKShapeView-prefix.pch</string>
-			<key>path</key>
-			<string>../Pods-Tests-CKShapeView/Pods-Tests-CKShapeView-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DF5CF08B0D519E0D5D37FE1F</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7C09DE1190A121021AED0230</string>
-			<key>buildPhases</key>
-			<array>
-				<string>6EDB8FE267CE4D59E138EFBE</string>
-				<string>85169076863AA1936275419B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>C87E5898B0C158392043CF76</string>
-				<string>60A118B52F7C479E90E4B514</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-TNKRefreshControl</string>
-			<key>productName</key>
-			<string>Pods-TNKRefreshControl</string>
-			<key>productReference</key>
-			<string>457D759A6A912C2B1F048440</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>DF6567AF90FECA61B870116C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F2D0573376DE766C06D76E63</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E3A7CC4DEE7040F48AC046CE</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A41BEC3D802A504414EDB792</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-Tests-CKShapeView/Pods-Tests-CKShapeView-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E4920CF3CA2299D436F91334</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5A505A95DC0750BCFB89BE86</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>AAEE30CA076D7CC3D3129378</string>
-			<key>remoteInfo</key>
-			<string>TNKRefreshControl</string>
-		</dict>
-		<key>E63D54B88C101CC18E03DA5F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-Tests-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E7B15C7D503B2609BE04DF09</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B4EADFC08C469AB5C039A21D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E7DD94220B7662015CABF310</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>79A2D15C45B78D0D49826AA6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E8BA50C92CEF53BFE78B0A0F</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5A505A95DC0750BCFB89BE86</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>AAEE30CA076D7CC3D3129378</string>
-			<key>remoteInfo</key>
-			<string>TNKRefreshControl</string>
-		</dict>
-		<key>EEA795526F5A2D29720DC9ED</key>
-		<dict>
-			<key>fileRef</key>
-			<string>372EEB71E465A80F69FE3D73</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F0CBB875C6E669AC09F2F80D</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C89523EAD5BB6E00DB6D6053</string>
-			<key>buildPhases</key>
-			<array>
-				<string>90109BE579658D02F7AA0FA6</string>
-				<string>32B2FAA51797E5DF72C97969</string>
-				<string>5D1D4515488FB6A1E5F60AA1</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>3F0E1FA9800B8864F69EC549</string>
-				<string>B98F59AAAB0A86FFC0905A08</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-Tests-TNKRefreshControl</string>
-			<key>productName</key>
-			<string>Pods-Tests-TNKRefreshControl</string>
-			<key>productReference</key>
-			<string>C0E79E180139078FD0A791E3</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>F186D17D1EF7CB365C9CEC04</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>AF77ABD5B551BBECE9DAC068</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-Tests-TNKRefreshControl/Pods-Tests-TNKRefreshControl-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>F2D0573376DE766C06D76E63</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>TNKRefreshControl.m</string>
-			<key>path</key>
-			<string>Pod/Classes/TNKRefreshControl.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F32324C0EC10D6AF7EB613BE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl-CKShapeView-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F42CC23BEB28D7EBA5BA9EBA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FCCEC05C60A74038508BBFDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>F817821712CBB3EC3589C5EC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5375962528C730BC7AB03277</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8357157BA791F7762A51C50</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5375962528C730BC7AB03277</string>
-				<string>DE4948F11041A726F6A74299</string>
-				<string>B0A5763DF2AA340F7AC4F58C</string>
-				<string>F2D0573376DE766C06D76E63</string>
-				<string>AF2A5E95EE652F703B374F99</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>TNKRefreshControl</string>
-			<key>path</key>
-			<string>../..</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F971FE0D5214B044A2ADBE64</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FB0B75FF87AF1317BF6B3C81</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FB2A56ADFFE249585975B441</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>FCCEC05C60A74038508BBFDF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CKShapeView.m</string>
-			<key>path</key>
-			<string>CKShapeView/CKShapeView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FD7E9CEC0CE78076B4B77449</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-TNKRefreshControl-TNKRefreshControl-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEEED50EF8F203416EDA29A7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D4D310F109B735A11759A689</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>5A505A95DC0750BCFB89BE86</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		029CF8AFAB38A71E8B179BA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA19FECF95B5E8323B6BD47 /* UIKit.framework */; };
+		0874B3518476497584E0E6E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5812248A1B1A1438977999FF /* Foundation.framework */; };
+		0B7A005BBA554D70A076BE1D /* TNKActivityIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5375962528C730BC7AB03277 /* TNKActivityIndicatorView.h */; };
+		119C26C6C60908EF5CC35E68 /* Pods-Tests-TNKRefreshControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B9F1E08040084D4D87ACBB /* Pods-Tests-TNKRefreshControl-dummy.m */; };
+		2319CDF84F6B0C42BEE20D2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5812248A1B1A1438977999FF /* Foundation.framework */; };
+		2B1844C7FC4D35AB6B2FBE2F /* Pods-TNKRefreshControl-TNKRefreshControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F7CC59624516E7EC073BC2 /* Pods-TNKRefreshControl-TNKRefreshControl-dummy.m */; };
+		2FA07C9073C3B604474BA569 /* CKShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEC05C60A74038508BBFDF /* CKShapeView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		356E157C5BFDE09B6C349343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5812248A1B1A1438977999FF /* Foundation.framework */; };
+		4C538EE3CEB3FA1A5A3FECC4 /* CKShapeView.h in Headers */ = {isa = PBXBuildFile; fileRef = A93D849A354F25A396AB0C16 /* CKShapeView.h */; };
+		79A2D15C45B78D0D49826AA6 /* CKShapeView.h in Headers */ = {isa = PBXBuildFile; fileRef = A93D849A354F25A396AB0C16 /* CKShapeView.h */; };
+		81D5BA85585D159E1D213BCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA19FECF95B5E8323B6BD47 /* UIKit.framework */; };
+		83C8D22554D795426792CADA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3338D5031AC4847DC02D8AEE /* QuartzCore.framework */; };
+		9068FDBF9800DEAD8BE0CEE9 /* TNKRefreshControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A5763DF2AA340F7AC4F58C /* TNKRefreshControl.h */; };
+		92173F7A01BF2BD3261A1928 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5812248A1B1A1438977999FF /* Foundation.framework */; };
+		98306D15C98854C73C991807 /* TNKRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D0573376DE766C06D76E63 /* TNKRefreshControl.m */; };
+		9F916A8A1FDBE863CAC81B95 /* TNKRefreshControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A5763DF2AA340F7AC4F58C /* TNKRefreshControl.h */; };
+		A2F1D01709FB76B0B5AFF047 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3338D5031AC4847DC02D8AEE /* QuartzCore.framework */; };
+		B4FDE0682DE64A1DC7A357F2 /* TNKActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4948F11041A726F6A74299 /* TNKActivityIndicatorView.m */; };
+		CE78D287A40C70E47F0F70AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5812248A1B1A1438977999FF /* Foundation.framework */; };
+		D07ED5FA83CC2CCFC7ED7E8A /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1137B7CD57993D1B22965D3F /* Pods-Tests-dummy.m */; };
+		D1AF52104774638D5280F0FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5812248A1B1A1438977999FF /* Foundation.framework */; };
+		D36F9022D2B8CC941E133FCA /* TNKActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4948F11041A726F6A74299 /* TNKActivityIndicatorView.m */; };
+		DB0D1C2B4258F38D4F7361C5 /* Pods-TNKRefreshControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0B75FF87AF1317BF6B3C81 /* Pods-TNKRefreshControl-dummy.m */; };
+		DF6567AF90FECA61B870116C /* TNKRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D0573376DE766C06D76E63 /* TNKRefreshControl.m */; };
+		EEA795526F5A2D29720DC9ED /* Pods-Tests-CKShapeView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 372EEB71E465A80F69FE3D73 /* Pods-Tests-CKShapeView-dummy.m */; };
+		F42CC23BEB28D7EBA5BA9EBA /* CKShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEC05C60A74038508BBFDF /* CKShapeView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F817821712CBB3EC3589C5EC /* TNKActivityIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5375962528C730BC7AB03277 /* TNKActivityIndicatorView.h */; };
+		FEEED50EF8F203416EDA29A7 /* Pods-TNKRefreshControl-CKShapeView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D310F109B735A11759A689 /* Pods-TNKRefreshControl-CKShapeView-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04F180FB342945AFF6E636B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A505A95DC0750BCFB89BE86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82054095C58E9ACF6180EFB9;
+			remoteInfo = "Pods-TNKRefreshControl-CKShapeView";
+		};
+		285D5AB40B97A4B2EA34B425 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A505A95DC0750BCFB89BE86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 509FF21ECFA3EF2D67E23480;
+			remoteInfo = "Pods-Tests-CKShapeView";
+		};
+		31F4AE690CAEDF1317D25433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A505A95DC0750BCFB89BE86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82054095C58E9ACF6180EFB9;
+			remoteInfo = "Pods-TNKRefreshControl-CKShapeView";
+		};
+		4EB28302073C2657C0C91B2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A505A95DC0750BCFB89BE86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0CBB875C6E669AC09F2F80D;
+			remoteInfo = "Pods-Tests-TNKRefreshControl";
+		};
+		91EAC85D0BF80288AEBC141F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A505A95DC0750BCFB89BE86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 509FF21ECFA3EF2D67E23480;
+			remoteInfo = "Pods-Tests-CKShapeView";
+		};
+		A8659FC25A70C9EB1762CC57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A505A95DC0750BCFB89BE86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2772774F1E39B6851D4F98D;
+			remoteInfo = "Pods-TNKRefreshControl-TNKRefreshControl";
+		};
+		E4920CF3CA2299D436F91334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A505A95DC0750BCFB89BE86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAEE30CA076D7CC3D3129378;
+			remoteInfo = TNKRefreshControl;
+		};
+		E8BA50C92CEF53BFE78B0A0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A505A95DC0750BCFB89BE86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAEE30CA076D7CC3D3129378;
+			remoteInfo = TNKRefreshControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05B45DB8F0C4B9B7ADBD7BA9 /* Pods-Tests-CKShapeView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-CKShapeView.xcconfig"; path = "../Pods-Tests-CKShapeView/Pods-Tests-CKShapeView.xcconfig"; sourceTree = "<group>"; };
+		0C5F1084643AA3DA067743F1 /* Pods-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-resources.sh"; sourceTree = "<group>"; };
+		1137B7CD57993D1B22965D3F /* Pods-Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-dummy.m"; sourceTree = "<group>"; };
+		121AF695C6087DA67BC05DD8 /* TNKRefreshControl.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNKRefreshControl.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		18668B412A675B7B38FB9AE7 /* Pods-TNKRefreshControl-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TNKRefreshControl-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1FA19FECF95B5E8323B6BD47 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		26616F8CB4FE533E1ADD493C /* libPods-TNKRefreshControl-TNKRefreshControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TNKRefreshControl-TNKRefreshControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26B9F1E08040084D4D87ACBB /* Pods-Tests-TNKRefreshControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Tests-TNKRefreshControl-dummy.m"; path = "../Pods-Tests-TNKRefreshControl/Pods-Tests-TNKRefreshControl-dummy.m"; sourceTree = "<group>"; };
+		3338D5031AC4847DC02D8AEE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		372EEB71E465A80F69FE3D73 /* Pods-Tests-CKShapeView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Tests-CKShapeView-dummy.m"; path = "../Pods-Tests-CKShapeView/Pods-Tests-CKShapeView-dummy.m"; sourceTree = "<group>"; };
+		3AF1DA8B9E75302CAC79D7D9 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		457D759A6A912C2B1F048440 /* libPods-TNKRefreshControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TNKRefreshControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46BDD71217A8167ECEEFBB52 /* Pods-TNKRefreshControl-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TNKRefreshControl-environment.h"; sourceTree = "<group>"; };
+		52F7CC59624516E7EC073BC2 /* Pods-TNKRefreshControl-TNKRefreshControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TNKRefreshControl-TNKRefreshControl-dummy.m"; sourceTree = "<group>"; };
+		5375962528C730BC7AB03277 /* TNKActivityIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKActivityIndicatorView.h; path = Pod/Classes/TNKActivityIndicatorView.h; sourceTree = "<group>"; };
+		54C15DFCE536D9A515DBDB7F /* Pods-Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5812248A1B1A1438977999FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5C7191142D7706C9B005716F /* Pods-TNKRefreshControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TNKRefreshControl.release.xcconfig"; sourceTree = "<group>"; };
+		63A545D7C6C5202A34BE6EC9 /* Pods-TNKRefreshControl-CKShapeView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TNKRefreshControl-CKShapeView.xcconfig"; sourceTree = "<group>"; };
+		6623F9C75D6CAA43C7635840 /* Pods-Tests-TNKRefreshControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Tests-TNKRefreshControl-prefix.pch"; path = "../Pods-Tests-TNKRefreshControl/Pods-Tests-TNKRefreshControl-prefix.pch"; sourceTree = "<group>"; };
+		6F86A02885CBE99060BFA83D /* Pods-TNKRefreshControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TNKRefreshControl.debug.xcconfig"; sourceTree = "<group>"; };
+		7070283E279AE7735FA9CA85 /* libPods-TNKRefreshControl-CKShapeView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TNKRefreshControl-CKShapeView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8825D743B50C6AEA8267DD /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		80371FDA496B0327BC6D6E1A /* libPods-Tests-CKShapeView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-CKShapeView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8037D55BD55914913CB102EA /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		879FF5152C68A4EAF6C8E515 /* Pods-TNKRefreshControl-TNKRefreshControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TNKRefreshControl-TNKRefreshControl.xcconfig"; sourceTree = "<group>"; };
+		97B0FBCB7AB597F02F44F0E4 /* Pods-TNKRefreshControl-TNKRefreshControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TNKRefreshControl-TNKRefreshControl-prefix.pch"; sourceTree = "<group>"; };
+		A00741F49A3617285D7B0719 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A41BEC3D802A504414EDB792 /* Pods-Tests-CKShapeView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-CKShapeView-Private.xcconfig"; path = "../Pods-Tests-CKShapeView/Pods-Tests-CKShapeView-Private.xcconfig"; sourceTree = "<group>"; };
+		A93D849A354F25A396AB0C16 /* CKShapeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKShapeView.h; path = CKShapeView/CKShapeView.h; sourceTree = "<group>"; };
+		AF77ABD5B551BBECE9DAC068 /* Pods-Tests-TNKRefreshControl-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-TNKRefreshControl-Private.xcconfig"; path = "../Pods-Tests-TNKRefreshControl/Pods-Tests-TNKRefreshControl-Private.xcconfig"; sourceTree = "<group>"; };
+		B0A5763DF2AA340F7AC4F58C /* TNKRefreshControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKRefreshControl.h; path = Pod/Classes/TNKRefreshControl.h; sourceTree = "<group>"; };
+		B6BDD566A787C57930FEDCF4 /* Pods-TNKRefreshControl-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TNKRefreshControl-acknowledgements.plist"; sourceTree = "<group>"; };
+		C0E79E180139078FD0A791E3 /* libPods-Tests-TNKRefreshControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-TNKRefreshControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCE11EFEB8D1701741F609FB /* Pods-Tests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-environment.h"; sourceTree = "<group>"; };
+		D4D310F109B735A11759A689 /* Pods-TNKRefreshControl-CKShapeView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TNKRefreshControl-CKShapeView-dummy.m"; sourceTree = "<group>"; };
+		D67BF4CD52B9B033ED5E2690 /* Pods-TNKRefreshControl-CKShapeView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TNKRefreshControl-CKShapeView-prefix.pch"; sourceTree = "<group>"; };
+		D7A982E0518767BB1066DD39 /* Pods-Tests-TNKRefreshControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-TNKRefreshControl.xcconfig"; path = "../Pods-Tests-TNKRefreshControl/Pods-Tests-TNKRefreshControl.xcconfig"; sourceTree = "<group>"; };
+		DE4948F11041A726F6A74299 /* TNKActivityIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TNKActivityIndicatorView.m; path = Pod/Classes/TNKActivityIndicatorView.m; sourceTree = "<group>"; };
+		DE55F4BF97DFE6C177784FAA /* Pods-Tests-CKShapeView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Tests-CKShapeView-prefix.pch"; path = "../Pods-Tests-CKShapeView/Pods-Tests-CKShapeView-prefix.pch"; sourceTree = "<group>"; };
+		E63D54B88C101CC18E03DA5F /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F2D0573376DE766C06D76E63 /* TNKRefreshControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TNKRefreshControl.m; path = Pod/Classes/TNKRefreshControl.m; sourceTree = "<group>"; };
+		F32324C0EC10D6AF7EB613BE /* Pods-TNKRefreshControl-CKShapeView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TNKRefreshControl-CKShapeView-Private.xcconfig"; sourceTree = "<group>"; };
+		F971FE0D5214B044A2ADBE64 /* Pods-TNKRefreshControl-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TNKRefreshControl-resources.sh"; sourceTree = "<group>"; };
+		FB0B75FF87AF1317BF6B3C81 /* Pods-TNKRefreshControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TNKRefreshControl-dummy.m"; sourceTree = "<group>"; };
+		FCCEC05C60A74038508BBFDF /* CKShapeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CKShapeView.m; path = CKShapeView/CKShapeView.m; sourceTree = "<group>"; };
+		FD7E9CEC0CE78076B4B77449 /* Pods-TNKRefreshControl-TNKRefreshControl-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TNKRefreshControl-TNKRefreshControl-Private.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32B2FAA51797E5DF72C97969 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2319CDF84F6B0C42BEE20D2B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C7C114288E98A3AA92E19A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92173F7A01BF2BD3261A1928 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D8F30F623B57F1EBF81FC8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE78D287A40C70E47F0F70AF /* Foundation.framework in Frameworks */,
+				A2F1D01709FB76B0B5AFF047 /* QuartzCore.framework in Frameworks */,
+				81D5BA85585D159E1D213BCC /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85169076863AA1936275419B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0874B3518476497584E0E6E0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4887B9449033014FCAE1954 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				356E157C5BFDE09B6C349343 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D71F48E357DAE76E61525354 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1AF52104774638D5280F0FB /* Foundation.framework in Frameworks */,
+				83C8D22554D795426792CADA /* QuartzCore.framework in Frameworks */,
+				029CF8AFAB38A71E8B179BA3 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB2A56ADFFE249585975B441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18B7913ED4413A267C0A2A8A /* Pods-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				54C15DFCE536D9A515DBDB7F /* Pods-Tests-acknowledgements.markdown */,
+				E63D54B88C101CC18E03DA5F /* Pods-Tests-acknowledgements.plist */,
+				1137B7CD57993D1B22965D3F /* Pods-Tests-dummy.m */,
+				CCE11EFEB8D1701741F609FB /* Pods-Tests-environment.h */,
+				0C5F1084643AA3DA067743F1 /* Pods-Tests-resources.sh */,
+				A00741F49A3617285D7B0719 /* Pods-Tests.debug.xcconfig */,
+				7F8825D743B50C6AEA8267DD /* Pods-Tests.release.xcconfig */,
+			);
+			name = "Pods-Tests";
+			path = "Target Support Files/Pods-Tests";
+			sourceTree = "<group>";
+		};
+		329E7A5DFCA297E60F5EDB69 /* Pods-TNKRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				18668B412A675B7B38FB9AE7 /* Pods-TNKRefreshControl-acknowledgements.markdown */,
+				B6BDD566A787C57930FEDCF4 /* Pods-TNKRefreshControl-acknowledgements.plist */,
+				FB0B75FF87AF1317BF6B3C81 /* Pods-TNKRefreshControl-dummy.m */,
+				46BDD71217A8167ECEEFBB52 /* Pods-TNKRefreshControl-environment.h */,
+				F971FE0D5214B044A2ADBE64 /* Pods-TNKRefreshControl-resources.sh */,
+				6F86A02885CBE99060BFA83D /* Pods-TNKRefreshControl.debug.xcconfig */,
+				5C7191142D7706C9B005716F /* Pods-TNKRefreshControl.release.xcconfig */,
+			);
+			name = "Pods-TNKRefreshControl";
+			path = "Target Support Files/Pods-TNKRefreshControl";
+			sourceTree = "<group>";
+		};
+		3C801663D93189630430EC95 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				329E7A5DFCA297E60F5EDB69 /* Pods-TNKRefreshControl */,
+				18B7913ED4413A267C0A2A8A /* Pods-Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6331D106BC7912E0630D052C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8357157BA791F7762A51C50 /* TNKRefreshControl */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		6414AE4C20C76CEC856FC3E9 /* CKShapeView */ = {
+			isa = PBXGroup;
+			children = (
+				A93D849A354F25A396AB0C16 /* CKShapeView.h */,
+				FCCEC05C60A74038508BBFDF /* CKShapeView.m */,
+				B67705F3F9DF0386AFC7ED33 /* Support Files */,
+			);
+			path = CKShapeView;
+			sourceTree = "<group>";
+		};
+		99F9672E6866AF7A2172C09C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				121AF695C6087DA67BC05DD8 /* TNKRefreshControl.bundle */,
+				457D759A6A912C2B1F048440 /* libPods-TNKRefreshControl.a */,
+				7070283E279AE7735FA9CA85 /* libPods-TNKRefreshControl-CKShapeView.a */,
+				26616F8CB4FE533E1ADD493C /* libPods-TNKRefreshControl-TNKRefreshControl.a */,
+				3AF1DA8B9E75302CAC79D7D9 /* libPods-Tests.a */,
+				80371FDA496B0327BC6D6E1A /* libPods-Tests-CKShapeView.a */,
+				C0E79E180139078FD0A791E3 /* libPods-Tests-TNKRefreshControl.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2EE59FFB73BC0EF3975D71B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6414AE4C20C76CEC856FC3E9 /* CKShapeView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF2A5E95EE652F703B374F99 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				879FF5152C68A4EAF6C8E515 /* Pods-TNKRefreshControl-TNKRefreshControl.xcconfig */,
+				FD7E9CEC0CE78076B4B77449 /* Pods-TNKRefreshControl-TNKRefreshControl-Private.xcconfig */,
+				52F7CC59624516E7EC073BC2 /* Pods-TNKRefreshControl-TNKRefreshControl-dummy.m */,
+				97B0FBCB7AB597F02F44F0E4 /* Pods-TNKRefreshControl-TNKRefreshControl-prefix.pch */,
+				D7A982E0518767BB1066DD39 /* Pods-Tests-TNKRefreshControl.xcconfig */,
+				AF77ABD5B551BBECE9DAC068 /* Pods-Tests-TNKRefreshControl-Private.xcconfig */,
+				26B9F1E08040084D4D87ACBB /* Pods-Tests-TNKRefreshControl-dummy.m */,
+				6623F9C75D6CAA43C7635840 /* Pods-Tests-TNKRefreshControl-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Pods-TNKRefreshControl-TNKRefreshControl";
+			sourceTree = "<group>";
+		};
+		B4EADFC08C469AB5C039A21D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5812248A1B1A1438977999FF /* Foundation.framework */,
+				3338D5031AC4847DC02D8AEE /* QuartzCore.framework */,
+				1FA19FECF95B5E8323B6BD47 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B67705F3F9DF0386AFC7ED33 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				63A545D7C6C5202A34BE6EC9 /* Pods-TNKRefreshControl-CKShapeView.xcconfig */,
+				F32324C0EC10D6AF7EB613BE /* Pods-TNKRefreshControl-CKShapeView-Private.xcconfig */,
+				D4D310F109B735A11759A689 /* Pods-TNKRefreshControl-CKShapeView-dummy.m */,
+				D67BF4CD52B9B033ED5E2690 /* Pods-TNKRefreshControl-CKShapeView-prefix.pch */,
+				05B45DB8F0C4B9B7ADBD7BA9 /* Pods-Tests-CKShapeView.xcconfig */,
+				A41BEC3D802A504414EDB792 /* Pods-Tests-CKShapeView-Private.xcconfig */,
+				372EEB71E465A80F69FE3D73 /* Pods-Tests-CKShapeView-dummy.m */,
+				DE55F4BF97DFE6C177784FAA /* Pods-Tests-CKShapeView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TNKRefreshControl-CKShapeView";
+			sourceTree = "<group>";
+		};
+		D18D6B54FCC3D3E2AE1ACD56 = {
+			isa = PBXGroup;
+			children = (
+				8037D55BD55914913CB102EA /* Podfile */,
+				6331D106BC7912E0630D052C /* Development Pods */,
+				E7B15C7D503B2609BE04DF09 /* Frameworks */,
+				A2EE59FFB73BC0EF3975D71B /* Pods */,
+				99F9672E6866AF7A2172C09C /* Products */,
+				3C801663D93189630430EC95 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E7B15C7D503B2609BE04DF09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4EADFC08C469AB5C039A21D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8357157BA791F7762A51C50 /* TNKRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				5375962528C730BC7AB03277 /* TNKActivityIndicatorView.h */,
+				DE4948F11041A726F6A74299 /* TNKActivityIndicatorView.m */,
+				B0A5763DF2AA340F7AC4F58C /* TNKRefreshControl.h */,
+				F2D0573376DE766C06D76E63 /* TNKRefreshControl.m */,
+				AF2A5E95EE652F703B374F99 /* Support Files */,
+			);
+			name = TNKRefreshControl;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5D1D4515488FB6A1E5F60AA1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B7A005BBA554D70A076BE1D /* TNKActivityIndicatorView.h in Headers */,
+				9F916A8A1FDBE863CAC81B95 /* TNKRefreshControl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97E7EDB1FF044A1F1599682F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C538EE3CEB3FA1A5A3FECC4 /* CKShapeView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0928B4C68A2623E6F21B8DC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F817821712CBB3EC3589C5EC /* TNKActivityIndicatorView.h in Headers */,
+				9068FDBF9800DEAD8BE0CEE9 /* TNKRefreshControl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7DD94220B7662015CABF310 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79A2D15C45B78D0D49826AA6 /* CKShapeView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1A0F5D35B195D8FB2574A949 /* Pods-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16EBCC8253230E793CCE7AA2 /* Build configuration list for PBXNativeTarget "Pods-Tests" */;
+			buildPhases = (
+				45B6345AB7F1CBA50667FC3E /* Sources */,
+				42C7C114288E98A3AA92E19A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51E613F5B6272D91A0FCCCF0 /* PBXTargetDependency */,
+				4967D8D63A912207C2BEFE8D /* PBXTargetDependency */,
+			);
+			name = "Pods-Tests";
+			productName = "Pods-Tests";
+			productReference = 3AF1DA8B9E75302CAC79D7D9 /* libPods-Tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		509FF21ECFA3EF2D67E23480 /* Pods-Tests-CKShapeView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33E7E24F3F46B6E86FBCD5A5 /* Build configuration list for PBXNativeTarget "Pods-Tests-CKShapeView" */;
+			buildPhases = (
+				337AD36AD15512DA2639DD08 /* Sources */,
+				D71F48E357DAE76E61525354 /* Frameworks */,
+				E7DD94220B7662015CABF310 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Tests-CKShapeView";
+			productName = "Pods-Tests-CKShapeView";
+			productReference = 80371FDA496B0327BC6D6E1A /* libPods-Tests-CKShapeView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		82054095C58E9ACF6180EFB9 /* Pods-TNKRefreshControl-CKShapeView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61DA2F6FD7D5411C9C53B604 /* Build configuration list for PBXNativeTarget "Pods-TNKRefreshControl-CKShapeView" */;
+			buildPhases = (
+				C49E24E25E6118F6DCAF9F59 /* Sources */,
+				5D8F30F623B57F1EBF81FC8D /* Frameworks */,
+				97E7EDB1FF044A1F1599682F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TNKRefreshControl-CKShapeView";
+			productName = "Pods-TNKRefreshControl-CKShapeView";
+			productReference = 7070283E279AE7735FA9CA85 /* libPods-TNKRefreshControl-CKShapeView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AAEE30CA076D7CC3D3129378 /* TNKRefreshControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC4B932FFC6AF0C9BF03EA04 /* Build configuration list for PBXNativeTarget "TNKRefreshControl" */;
+			buildPhases = (
+				924EABFEBBB0D36AE1BC38BE /* Sources */,
+				FB2A56ADFFE249585975B441 /* Frameworks */,
+				AB7B2F6202A07BCD64DAAA60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TNKRefreshControl;
+			productName = TNKRefreshControl;
+			productReference = 121AF695C6087DA67BC05DD8 /* TNKRefreshControl.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		C2772774F1E39B6851D4F98D /* Pods-TNKRefreshControl-TNKRefreshControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40924D9B7F4689B9BEAED4FE /* Build configuration list for PBXNativeTarget "Pods-TNKRefreshControl-TNKRefreshControl" */;
+			buildPhases = (
+				D5992A4F46437E7881B91405 /* Sources */,
+				B4887B9449033014FCAE1954 /* Frameworks */,
+				B0928B4C68A2623E6F21B8DC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00142D2D98D4E62849886D81 /* PBXTargetDependency */,
+				4E24396AF948F59260ECD040 /* PBXTargetDependency */,
+			);
+			name = "Pods-TNKRefreshControl-TNKRefreshControl";
+			productName = "Pods-TNKRefreshControl-TNKRefreshControl";
+			productReference = 26616F8CB4FE533E1ADD493C /* libPods-TNKRefreshControl-TNKRefreshControl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DF5CF08B0D519E0D5D37FE1F /* Pods-TNKRefreshControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C09DE1190A121021AED0230 /* Build configuration list for PBXNativeTarget "Pods-TNKRefreshControl" */;
+			buildPhases = (
+				6EDB8FE267CE4D59E138EFBE /* Sources */,
+				85169076863AA1936275419B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C87E5898B0C158392043CF76 /* PBXTargetDependency */,
+				60A118B52F7C479E90E4B514 /* PBXTargetDependency */,
+			);
+			name = "Pods-TNKRefreshControl";
+			productName = "Pods-TNKRefreshControl";
+			productReference = 457D759A6A912C2B1F048440 /* libPods-TNKRefreshControl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F0CBB875C6E669AC09F2F80D /* Pods-Tests-TNKRefreshControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C89523EAD5BB6E00DB6D6053 /* Build configuration list for PBXNativeTarget "Pods-Tests-TNKRefreshControl" */;
+			buildPhases = (
+				90109BE579658D02F7AA0FA6 /* Sources */,
+				32B2FAA51797E5DF72C97969 /* Frameworks */,
+				5D1D4515488FB6A1E5F60AA1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F0E1FA9800B8864F69EC549 /* PBXTargetDependency */,
+				B98F59AAAB0A86FFC0905A08 /* PBXTargetDependency */,
+			);
+			name = "Pods-Tests-TNKRefreshControl";
+			productName = "Pods-Tests-TNKRefreshControl";
+			productReference = C0E79E180139078FD0A791E3 /* libPods-Tests-TNKRefreshControl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A505A95DC0750BCFB89BE86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = D95D47128B4B2069B2F29202 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D18D6B54FCC3D3E2AE1ACD56;
+			productRefGroup = 99F9672E6866AF7A2172C09C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF5CF08B0D519E0D5D37FE1F /* Pods-TNKRefreshControl */,
+				82054095C58E9ACF6180EFB9 /* Pods-TNKRefreshControl-CKShapeView */,
+				C2772774F1E39B6851D4F98D /* Pods-TNKRefreshControl-TNKRefreshControl */,
+				1A0F5D35B195D8FB2574A949 /* Pods-Tests */,
+				509FF21ECFA3EF2D67E23480 /* Pods-Tests-CKShapeView */,
+				F0CBB875C6E669AC09F2F80D /* Pods-Tests-TNKRefreshControl */,
+				AAEE30CA076D7CC3D3129378 /* TNKRefreshControl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB7B2F6202A07BCD64DAAA60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		337AD36AD15512DA2639DD08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FA07C9073C3B604474BA569 /* CKShapeView.m in Sources */,
+				EEA795526F5A2D29720DC9ED /* Pods-Tests-CKShapeView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45B6345AB7F1CBA50667FC3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07ED5FA83CC2CCFC7ED7E8A /* Pods-Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EDB8FE267CE4D59E138EFBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB0D1C2B4258F38D4F7361C5 /* Pods-TNKRefreshControl-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90109BE579658D02F7AA0FA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				119C26C6C60908EF5CC35E68 /* Pods-Tests-TNKRefreshControl-dummy.m in Sources */,
+				B4FDE0682DE64A1DC7A357F2 /* TNKActivityIndicatorView.m in Sources */,
+				98306D15C98854C73C991807 /* TNKRefreshControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		924EABFEBBB0D36AE1BC38BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C49E24E25E6118F6DCAF9F59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F42CC23BEB28D7EBA5BA9EBA /* CKShapeView.m in Sources */,
+				FEEED50EF8F203416EDA29A7 /* Pods-TNKRefreshControl-CKShapeView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5992A4F46437E7881B91405 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B1844C7FC4D35AB6B2FBE2F /* Pods-TNKRefreshControl-TNKRefreshControl-dummy.m in Sources */,
+				D36F9022D2B8CC941E133FCA /* TNKActivityIndicatorView.m in Sources */,
+				DF6567AF90FECA61B870116C /* TNKRefreshControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00142D2D98D4E62849886D81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TNKRefreshControl-CKShapeView";
+			target = 82054095C58E9ACF6180EFB9 /* Pods-TNKRefreshControl-CKShapeView */;
+			targetProxy = 04F180FB342945AFF6E636B8 /* PBXContainerItemProxy */;
+		};
+		3F0E1FA9800B8864F69EC549 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-CKShapeView";
+			target = 509FF21ECFA3EF2D67E23480 /* Pods-Tests-CKShapeView */;
+			targetProxy = 91EAC85D0BF80288AEBC141F /* PBXContainerItemProxy */;
+		};
+		4967D8D63A912207C2BEFE8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-TNKRefreshControl";
+			target = F0CBB875C6E669AC09F2F80D /* Pods-Tests-TNKRefreshControl */;
+			targetProxy = 4EB28302073C2657C0C91B2F /* PBXContainerItemProxy */;
+		};
+		4E24396AF948F59260ECD040 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TNKRefreshControl;
+			target = AAEE30CA076D7CC3D3129378 /* TNKRefreshControl */;
+			targetProxy = E8BA50C92CEF53BFE78B0A0F /* PBXContainerItemProxy */;
+		};
+		51E613F5B6272D91A0FCCCF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-CKShapeView";
+			target = 509FF21ECFA3EF2D67E23480 /* Pods-Tests-CKShapeView */;
+			targetProxy = 285D5AB40B97A4B2EA34B425 /* PBXContainerItemProxy */;
+		};
+		60A118B52F7C479E90E4B514 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TNKRefreshControl-TNKRefreshControl";
+			target = C2772774F1E39B6851D4F98D /* Pods-TNKRefreshControl-TNKRefreshControl */;
+			targetProxy = A8659FC25A70C9EB1762CC57 /* PBXContainerItemProxy */;
+		};
+		B98F59AAAB0A86FFC0905A08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TNKRefreshControl;
+			target = AAEE30CA076D7CC3D3129378 /* TNKRefreshControl */;
+			targetProxy = E4920CF3CA2299D436F91334 /* PBXContainerItemProxy */;
+		};
+		C87E5898B0C158392043CF76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TNKRefreshControl-CKShapeView";
+			target = 82054095C58E9ACF6180EFB9 /* Pods-TNKRefreshControl-CKShapeView */;
+			targetProxy = 31F4AE690CAEDF1317D25433 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D9F747D6166AEBD3FF2CAA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F8825D743B50C6AEA8267DD /* Pods-Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		177978D34060AF9B47BD478D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		1C03CA6E60A44592FF05B9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F86A02885CBE99060BFA83D /* Pods-TNKRefreshControl.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2F591271805C962D327423BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A41BEC3D802A504414EDB792 /* Pods-Tests-CKShapeView-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-CKShapeView/Pods-Tests-CKShapeView-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		377574233DBB6E6C2E44CD87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF77ABD5B551BBECE9DAC068 /* Pods-Tests-TNKRefreshControl-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-TNKRefreshControl/Pods-Tests-TNKRefreshControl-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3D00945309CD50902BAF362F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD7E9CEC0CE78076B4B77449 /* Pods-TNKRefreshControl-TNKRefreshControl-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TNKRefreshControl-TNKRefreshControl/Pods-TNKRefreshControl-TNKRefreshControl-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50C496F7F7D0F5F9347BC05D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C7191142D7706C9B005716F /* Pods-TNKRefreshControl.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5203E4584CD912A2B93314E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		6A63F8588FD38E2222544D97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F32324C0EC10D6AF7EB613BE /* Pods-TNKRefreshControl-CKShapeView-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TNKRefreshControl-CKShapeView/Pods-TNKRefreshControl-CKShapeView-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		846D7B5BCE17379077512CDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		9DEF64B0D4D1601E61CD7365 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F32324C0EC10D6AF7EB613BE /* Pods-TNKRefreshControl-CKShapeView-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TNKRefreshControl-CKShapeView/Pods-TNKRefreshControl-CKShapeView-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A90267DDDD42C7E294BA568D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A00741F49A3617285D7B0719 /* Pods-Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C3C7E1E4D28BCFE67D7B8B3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C57D11ED919D8533EA92C636 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD7E9CEC0CE78076B4B77449 /* Pods-TNKRefreshControl-TNKRefreshControl-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TNKRefreshControl-TNKRefreshControl/Pods-TNKRefreshControl-TNKRefreshControl-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E3A7CC4DEE7040F48AC046CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A41BEC3D802A504414EDB792 /* Pods-Tests-CKShapeView-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-CKShapeView/Pods-Tests-CKShapeView-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F186D17D1EF7CB365C9CEC04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF77ABD5B551BBECE9DAC068 /* Pods-Tests-TNKRefreshControl-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-TNKRefreshControl/Pods-Tests-TNKRefreshControl-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16EBCC8253230E793CCE7AA2 /* Build configuration list for PBXNativeTarget "Pods-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90267DDDD42C7E294BA568D /* Debug */,
+				0D9F747D6166AEBD3FF2CAA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33E7E24F3F46B6E86FBCD5A5 /* Build configuration list for PBXNativeTarget "Pods-Tests-CKShapeView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3A7CC4DEE7040F48AC046CE /* Debug */,
+				2F591271805C962D327423BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40924D9B7F4689B9BEAED4FE /* Build configuration list for PBXNativeTarget "Pods-TNKRefreshControl-TNKRefreshControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C57D11ED919D8533EA92C636 /* Debug */,
+				3D00945309CD50902BAF362F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61DA2F6FD7D5411C9C53B604 /* Build configuration list for PBXNativeTarget "Pods-TNKRefreshControl-CKShapeView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DEF64B0D4D1601E61CD7365 /* Debug */,
+				6A63F8588FD38E2222544D97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C09DE1190A121021AED0230 /* Build configuration list for PBXNativeTarget "Pods-TNKRefreshControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C03CA6E60A44592FF05B9CD /* Debug */,
+				50C496F7F7D0F5F9347BC05D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C89523EAD5BB6E00DB6D6053 /* Build configuration list for PBXNativeTarget "Pods-Tests-TNKRefreshControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				377574233DBB6E6C2E44CD87 /* Debug */,
+				F186D17D1EF7CB365C9CEC04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95D47128B4B2069B2F29202 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				177978D34060AF9B47BD478D /* Debug */,
+				C3C7E1E4D28BCFE67D7B8B3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC4B932FFC6AF0C9BF03EA04 /* Build configuration list for PBXNativeTarget "TNKRefreshControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846D7B5BCE17379077512CDF /* Debug */,
+				5203E4584CD912A2B93314E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A505A95DC0750BCFB89BE86 /* Project object */;
+}
