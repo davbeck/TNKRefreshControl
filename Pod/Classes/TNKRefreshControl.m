@@ -269,12 +269,12 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 - (IBAction)panScrollView:(UIPanGestureRecognizer *)sender
 {
-    if (sender.state == UIGestureRecognizerStateEnded) { // dragging ended
+    if (sender.state == UIGestureRecognizerStateEnded || sender.state == UIGestureRecognizerStateCancelled || sender.state == UIGestureRecognizerStateFailed) { // dragging ended
         [self _layoutScrollView];
         
         // because this may be called after the rubber band effect has been decided, we may need to do it ourselves
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (_state != TNKRefreshControlStateRefreshing) {
+            if (_state != TNKRefreshControlStateRefreshing && !self.scrollView.decelerating) {
                 [self _scrollToTopIfNeeded];
             }
         });
