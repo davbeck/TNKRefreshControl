@@ -28,8 +28,8 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 @interface TNKRefreshControl ()
 {
     TNKActivityIndicatorView *_activityIndicator;
-    void(^_draggingEndedAction)();
     TNKRefreshControlState _state;
+    BOOL _ignoreOffsetChanged;// sometimes we aren't done yet
 }
 
 @property (nonatomic, weak) UIScrollView *scrollView;
@@ -42,6 +42,18 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 - (BOOL)isRefreshing
 {
     return _state == TNKRefreshControlStateRefreshing;
+}
+
+- (void)resetContentInsetForScrollView:(UIScrollView *)scrollView
+{
+    UIEdgeInsets contentInset = scrollView.contentInset;
+    contentInset.top -= _addedContentInset.top;
+    contentInset.left -= _addedContentInset.left;
+    contentInset.right -= _addedContentInset.right;
+    contentInset.bottom -= _addedContentInset.bottom;
+    scrollView.contentInset = contentInset;
+    
+    _addedContentInset = UIEdgeInsetsZero;
 }
 
 - (void)setAddedContentInset:(UIEdgeInsets)addedInsets
@@ -63,23 +75,19 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
         
         _addedContentInset = addedInsets;
         
+        _ignoreOffsetChanged = YES;
         self.scrollView.contentInset = contentInset;
+        _ignoreOffsetChanged = NO;
         self.scrollView.contentOffset = contentOffset;
     }
-}
-
-- (void)setScrollView:(UIScrollView *)scrollView
-{
-    self.addedContentInset = UIEdgeInsetsZero;
-    
-    _scrollView = scrollView;
-    [self _layoutScrollView];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (context == TNKScrollViewContext) {
-        [self _layoutScrollView];
+        if (!_ignoreOffsetChanged) {
+            [self _layoutScrollView];
+        }
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
@@ -118,11 +126,16 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     // our weak property is usually niled out by the time this is called, but odly self.superview is still correct
     UIScrollView *oldScrollView = [self _scrollViewForSuperview:self.superview];
     [oldScrollView removeObserver:self forKeyPath:@"contentOffset" context:TNKScrollViewContext];
+    [self resetContentInsetForScrollView:oldScrollView];
+    [oldScrollView.panGestureRecognizer removeTarget:self action:@selector(panScrollView:)];
     
     UIScrollView *scrollView = [self _scrollViewForSuperview:newSuperview];
     [scrollView addObserver:self forKeyPath:@"contentOffset" options:0 context:TNKScrollViewContext];
+    [scrollView.panGestureRecognizer addTarget:self action:@selector(panScrollView:)];
     
     self.scrollView = scrollView;
+    
+    [self _layoutScrollView];
 }
 
 - (void)layoutSubviews
@@ -139,13 +152,6 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 {
 //    NSLog(@"self.scrollView.contentOffset.y: %f", self.scrollView.contentOffset.y);
     
-    if (!self.scrollView.dragging && _draggingEndedAction != nil) {
-        void(^draggingEndedAction)() = _draggingEndedAction;
-        _draggingEndedAction = nil;// we don't want to fire this from within the block
-        
-        draggingEndedAction();
-    }
-    
     CGFloat frameY = 0.0;
     CGFloat lockedY = self.scrollView.contentOffset.y + self.scrollView.contentInset.top - self.addedContentInset.top;
     if (_state == TNKRefreshControlStateWaiting) {
@@ -161,6 +167,10 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     
     switch (_state) {
         case TNKRefreshControlStateWaiting: {
+            if (!self.scrollView.dragging) {
+                [self setAddedContentInset:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
+            }
+            
             CGFloat distance = -self.frame.origin.y - 10.0;
             CGFloat percent = 0.0;
             if (self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact) {
@@ -178,12 +188,19 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
             
             break;
         } case TNKRefreshControlStateEnding: {
-            if (self.scrollView.contentOffset.y >= -self.scrollView.contentInset.top) {
+            if (self.scrollView.contentOffset.y >= -(self.scrollView.contentInset.top - self.addedContentInset.top)) {
                 _state = TNKRefreshControlStateWaiting;
+            }
+            
+            if (!self.scrollView.dragging) {
+                [self setAddedContentInset:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
             }
             
             break;
         } case TNKRefreshControlStateRefreshing: {
+            if (!self.scrollView.dragging) {
+                [self setAddedContentInset:UIEdgeInsetsMake(self.bounds.size.height, 0.0, 0.0, 0.0)];
+            }
             
             break;
         }
@@ -212,15 +229,6 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
         contentOffset.y = -self.scrollView.contentInset.top - self.frame.size.height;
         [self.scrollView setContentOffset:contentOffset animated:animated];
     }
-    
-    if (self.scrollView.dragging) {
-        __weak __typeof(self)self_weak = self;
-        _draggingEndedAction = ^{
-            self_weak.addedContentInset = UIEdgeInsetsMake(self_weak.frame.size.height, 0.0, 0.0, 0.0);
-        };
-    } else {
-        self.addedContentInset = UIEdgeInsetsMake(self.frame.size.height, 0.0, 0.0, 0.0);
-    }
 }
 
 - (void)endRefreshing
@@ -228,31 +236,47 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     if (_state != TNKRefreshControlStateRefreshing) {
         return;
     }
+    _state = TNKRefreshControlStateEnding;
     
     [_activityIndicator stopAnimatingWithFadeAwayAnimation:YES completion:^{
-        _state = TNKRefreshControlStateEnding;
         
         // if we are at the very tippy top of the scroll view, this wouldn't get called in a way that would change the state back automatically
         [self _layoutScrollView];
     }];
     
-    if (self.scrollView.dragging) {
-        __weak __typeof(self)self_weak = self;
-        _draggingEndedAction = ^{
-            [self_weak setAddedContentInset:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
-        };
-    } else {
-        _draggingEndedAction = nil;
+    
+    // using setContentOffset:animated: and reloadData don't play well with each other
+    if (!self.scrollView.dragging) {
+        [self _scrollToTopIfNeeded];
+    }
+}
+
+- (void)_scrollToTopIfNeeded
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        CGFloat zeroOffset = -(self.scrollView.contentInset.top - self.addedContentInset.top);
+        if (self.scrollView.contentOffset.y < zeroOffset) {
+            CGPoint contentOffset = self.scrollView.contentOffset;
+            contentOffset.y = zeroOffset;
+            [self.scrollView setContentOffset:contentOffset animated:NO];
+        }
+    }];
+}
+
+
+#pragma mark - Actions
+
+- (IBAction)panScrollView:(UIPanGestureRecognizer *)sender
+{
+    if (sender.state == UIGestureRecognizerStateEnded) { // dragging ended
+        [self _layoutScrollView];
         
-        // using setContentOffset:animated: and reloadData don't play well with each other
-        [UIView animateWithDuration:0.3 animations:^{
-            [self setAddedContentInset:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
-            if (self.scrollView.contentOffset.y < -self.scrollView.contentInset.top && !self.scrollView.dragging) {
-                CGPoint contentOffset = self.scrollView.contentOffset;
-                contentOffset.y = -self.scrollView.contentInset.top;
-                [self.scrollView setContentOffset:contentOffset animated:NO];
+        // because this may be called after the rubber band effect has been decided, we may need to do it ourselves
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (_state != TNKRefreshControlStateRefreshing) {
+                [self _scrollToTopIfNeeded];
             }
-        }];
+        });
     }
 }
 
