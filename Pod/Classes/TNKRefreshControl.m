@@ -9,6 +9,7 @@
 #import "TNKRefreshControl.h"
 
 #import <objc/runtime.h>
+#import <JRSwizzle/JRSwizzle.h>
 
 #import "TNKActivityIndicatorView.h"
 
@@ -310,6 +311,63 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     
     if (self.backgroundView != nil) {
         [self insertSubview:refreshControl aboveSubview:self.backgroundView];
+    }
+}
+
+
++ (void)load
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSError *error;
+        BOOL result = [[self class] jr_swizzleMethod:@selector(layoutSubviews) withMethod:@selector(TNK_layoutSubviews) error:&error];
+        if (!result || error) {
+            NSLog(@"Can't swizzle methods - %@", [error description]);
+        }
+    });
+}
+
+- (void)TNK_layoutSubviews
+{
+    [self TNK_layoutSubviews]; // this will call viewWillAppear implementation, because we have exchanged them.
+    
+    
+    // UITableView has a nasty habbit of placing it's section headers below contentInset
+    // We aren't changing that behavior, just adjusting for the inset that we added
+    
+    if (self.refreshControl.addedContentInset.top != 0.0) {
+        //http://b2cloud.com.au/tutorial/uitableview-section-header-positions/
+        const NSUInteger numberOfSections = self.numberOfSections;
+        const UIEdgeInsets contentInset = self.contentInset;
+        const CGPoint contentOffset = self.contentOffset;
+        
+        const CGFloat sectionViewMinimumOriginY = contentOffset.y + contentInset.top - self.refreshControl.addedContentInset.top;
+        
+        //	Layout each header view
+        for(NSUInteger section = 0; section < numberOfSections; section++)
+        {
+            UIView* sectionView = [self headerViewForSection:section];
+            
+            if(sectionView == nil)
+                continue;
+            
+            const CGRect sectionFrame = [self rectForSection:section];
+            
+            CGRect sectionViewFrame = sectionView.frame;
+            
+            sectionViewFrame.origin.y = ((sectionFrame.origin.y < sectionViewMinimumOriginY) ? sectionViewMinimumOriginY : sectionFrame.origin.y);
+            
+            //	If it's not last section, manually 'stick' it to the below section if needed
+            if(section < numberOfSections - 1)
+            {
+                const CGRect nextSectionFrame = [self rectForSection:section + 1];
+                
+                if(CGRectGetMaxY(sectionViewFrame) > CGRectGetMinY(nextSectionFrame))
+                    sectionViewFrame.origin.y = nextSectionFrame.origin.y - sectionViewFrame.size.height;
+            }
+            
+            [sectionView setFrame:sectionViewFrame];
+        }
     }
 }
 

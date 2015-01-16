@@ -9,8 +9,6 @@
 import UIKit
 
 
-private let TimeInterval = 5.0
-
 extension NSTimer {
     class func scheduledTimerWithTimeInterval(interval: NSTimeInterval, repeats: Bool, handler: NSTimer! -> Void) -> NSTimer {
         let fireDate = interval + CFAbsoluteTimeGetCurrent()
@@ -26,7 +24,7 @@ class TNKDateSource: NSObject {
     private var highestNumber = 0
     
     func loadNewObjects(completed: (newObjects: [NSObject]) -> ()) {
-        NSTimer.scheduledTimerWithTimeInterval(3.0, repeats: false) { (timer) in
+        NSTimer.scheduledTimerWithTimeInterval(10.0, repeats: false) { (timer) in
             var newObjects: [NSObject] = []
             for i in 0..<5 {
                 self.highestNumber++

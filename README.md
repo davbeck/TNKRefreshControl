@@ -36,6 +36,13 @@ From there, you can programatically activate the refresh control programatically
 }
 ```
 
+> **Note:** There is an issue with UITableView, section headers and indexes where they will be
+> placed below any contentInset. TNKRefreshControl swizzle's `-[UITableView layoutSubviews]` to
+> correct the behavior for section headers but not section indexes. Further, you must use 
+> `-[UITableView dequeueReusableHeaderFooterViewWithIdentifier:]` (or the default header views)
+> for this to work.
+> See [rdar://19489536](http://openradar.appspot.com/radar?id=6142546598166528) for more info.
+
 ## Installation
 
 TNKRefreshControl is available through [CocoaPods](http://cocoapods.org). To install

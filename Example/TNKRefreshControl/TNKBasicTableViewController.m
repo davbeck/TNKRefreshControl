@@ -47,9 +47,10 @@
     [self.tableView.refreshControl beginRefreshing];
     
     [_objectSource loadNewObjects:^(NSArray *newDates) {
-        [self.tableView.refreshControl endRefreshing];
-        
+        CGPoint offset = self.tableView.contentOffset;
         [self.tableView reloadData];
+        self.tableView.contentOffset = offset;
+        [self.tableView.refreshControl endRefreshing];
     }];
 }
 
@@ -76,6 +77,11 @@
     cell.textLabel.text = date.description;
     
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return NSLocalizedString(@"Section Header", nil);
 }
 
 @end
