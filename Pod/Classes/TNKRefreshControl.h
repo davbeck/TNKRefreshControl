@@ -39,6 +39,13 @@
  */
 @property (nonatomic, readonly, getter=isRefreshing) BOOL refreshing;
 
+/** The associated scroll view
+ 
+ A weak reference to the scroll view that the control has been added to. This is computed dynamically
+ based on the controls superview.
+ */
+@property (nonatomic, weak) UIScrollView *scrollView;
+
 @end
 
 

@@ -33,7 +33,6 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     BOOL _ignoreOffsetChanged;// sometimes we aren't done yet
 }
 
-@property (nonatomic, weak) UIScrollView *scrollView;
 @property (nonatomic) UIEdgeInsets addedContentInset;
 
 @end
