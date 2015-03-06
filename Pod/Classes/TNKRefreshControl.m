@@ -123,11 +123,15 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 {
     [super willMoveToSuperview:newSuperview];
     
+    // we have an awkward situation here when the scrollView is deallocated before setting self.refreshControl to nil
     // our weak property is usually niled out by the time this is called, but odly self.superview is still correct
-    UIScrollView *oldScrollView = [self _scrollViewForSuperview:self.superview];
-    [oldScrollView removeObserver:self forKeyPath:@"contentOffset" context:TNKScrollViewContext];
-    [self resetContentInsetForScrollView:oldScrollView];
-    [oldScrollView.panGestureRecognizer removeTarget:self action:@selector(panScrollView:)];
+    // if we let the scrollView be autoreleased, it will be gone and deallocated by the time the autorelease pool is drained
+    @autoreleasepool {
+        UIScrollView *oldScrollView = [self _scrollViewForSuperview:self.superview];
+        [oldScrollView removeObserver:self forKeyPath:@"contentOffset" context:TNKScrollViewContext];
+        [self resetContentInsetForScrollView:oldScrollView];
+        [oldScrollView.panGestureRecognizer removeTarget:self action:@selector(panScrollView:)];
+    }
     
     UIScrollView *scrollView = [self _scrollViewForSuperview:newSuperview];
     [scrollView addObserver:self forKeyPath:@"contentOffset" options:0 context:TNKScrollViewContext];
