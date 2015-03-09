@@ -178,7 +178,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
             CGFloat distance = -self.frame.origin.y - 10.0;
             CGFloat percent = 0.0;
             if (distance > 0.0) {
-                if (self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact) {
+                if (NSClassFromString(@"UITraitCollection") && self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact) {
                     percent = pow(distance / 50.0, 2); // http://cl.ly/image/0O280G3C3H3M
                 } else {
                     percent = pow(2.0, distance / 60.0) - 1.0; // http://cl.ly/image/2r3y0h0Z0B01
