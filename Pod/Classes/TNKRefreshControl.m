@@ -244,8 +244,8 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     }
     _state = TNKRefreshControlStateEnding;
     
-    [_activityIndicator stopAnimatingWithFadeAwayAnimation:YES completion:^{
-        
+    BOOL animate = self.scrollView.contentOffset.y < -self.scrollView.contentInset.top;
+    [_activityIndicator stopAnimatingWithFadeAwayAnimation:animate completion:^{
         // if we are at the very tippy top of the scroll view, this wouldn't get called in a way that would change the state back automatically
         [self _layoutScrollView];
     }];
@@ -312,10 +312,12 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 - (void)setRefreshControl:(TNKRefreshControl *)refreshControl
 {
-    [super setRefreshControl:refreshControl];
-    
-    if (self.backgroundView != nil) {
-        [self insertSubview:refreshControl aboveSubview:self.backgroundView];
+    if (self.refreshControl != refreshControl) {
+        [super setRefreshControl:refreshControl];
+        
+        if (self.backgroundView != nil) {
+            [self insertSubview:refreshControl aboveSubview:self.backgroundView];
+        }
     }
 }
 
