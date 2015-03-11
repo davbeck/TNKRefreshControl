@@ -129,9 +129,8 @@
         
         if (animated) {
             _spinnerView.alpha = 0.0;
-            _spinnerView.transform = CGAffineTransformScale(_spinnerView.transform, 0.1, 0.1);
             
-            [UIView animateWithDuration:0.2 delay:0.0 options:0 animations:^{
+            [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
                 _spinnerView.alpha = 1.0;
                 _spinnerView.transform = _defaultTransform;
             } completion:^(BOOL finished) {
@@ -152,9 +151,9 @@
 {
     if (_animating) {
         if (animated) {
-            [UIView animateWithDuration:0.2 delay:0.0 options:0 animations:^{
+            [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
                 _spinnerView.alpha = 0.0;
-                _spinnerView.transform = CGAffineTransformScale(_spinnerView.transform, 0.1, 0.1);
+                _spinnerView.transform = CGAffineTransformMakeScale(0.1, 0.1);
             } completion:^(BOOL finished) {
                 _spinnerView.alpha = 1.0;
                 _spinnerView.transform = _defaultTransform;
