@@ -44,16 +44,16 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     return _state == TNKRefreshControlStateRefreshing;
 }
 
-- (void)resetContentInsetForScrollView:(UIScrollView *)scrollView
+- (void)resetContentInset
 {
-    UIEdgeInsets contentInset = scrollView.contentInset;
-    contentInset.top -= _addedContentInset.top;
-    contentInset.left -= _addedContentInset.left;
-    contentInset.right -= _addedContentInset.right;
-    contentInset.bottom -= _addedContentInset.bottom;
-    scrollView.contentInset = contentInset;
-    
-    _addedContentInset = UIEdgeInsetsZero;
+	UIEdgeInsets contentInset = self.scrollView.contentInset;
+	contentInset.top -= _addedContentInset.top;
+	contentInset.left -= _addedContentInset.left;
+	contentInset.right -= _addedContentInset.right;
+	contentInset.bottom -= _addedContentInset.bottom;
+	self.scrollView.contentInset = contentInset;
+	
+	_addedContentInset = UIEdgeInsetsZero;
 }
 
 - (void)setAddedContentInset:(UIEdgeInsets)addedInsets
@@ -129,7 +129,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
     @autoreleasepool {
         UIScrollView *oldScrollView = [self _scrollViewForSuperview:self.superview];
         [oldScrollView removeObserver:self forKeyPath:@"contentOffset" context:TNKScrollViewContext];
-        [self resetContentInsetForScrollView:oldScrollView];
+        [self resetContentInset];
         [oldScrollView.panGestureRecognizer removeTarget:self action:@selector(panScrollView:)];
     }
     
