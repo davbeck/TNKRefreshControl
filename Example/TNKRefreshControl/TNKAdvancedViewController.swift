@@ -8,6 +8,9 @@
 
 import UIKit
 
+import TNKRefreshControl
+
+
 let reuseIdentifier = "NumberCell"
 
 
@@ -47,12 +50,10 @@ class TNKAdvancedViewController: UICollectionViewController {
             self.collectionView?.refreshControl.endRefreshing()
             
             var indexPaths: [NSIndexPath] = []
-            for object in newObjects {
-                if let item = find(self.objectSource.objects, object) {
-                    indexPaths.append(NSIndexPath(forItem: 0, inSection: 0))
-                }
+			for _ in newObjects {
+				indexPaths.append(NSIndexPath(forItem: 0, inSection: 0))
             }
-            
+			
             self.collectionView?.insertItemsAtIndexPaths(indexPaths)
 //            self.collectionView?.reloadData()
         }
@@ -76,7 +77,7 @@ class TNKAdvancedViewController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as TNKAdvancedCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! TNKAdvancedCell
         
         cell.numberLabel.text = self.objectSource.objects[indexPath.item].description
         

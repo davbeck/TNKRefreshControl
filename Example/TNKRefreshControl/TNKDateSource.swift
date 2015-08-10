@@ -26,7 +26,7 @@ class TNKDateSource: NSObject {
     func loadNewObjects(completed: (newObjects: [NSObject]) -> ()) {
         NSTimer.scheduledTimerWithTimeInterval(10.0, repeats: false) { (timer) in
             var newObjects: [NSObject] = []
-            for i in 0..<5 {
+            for _ in 0..<5 {
                 self.highestNumber++
                 newObjects.insert(self.highestNumber, atIndex: 0)
             }

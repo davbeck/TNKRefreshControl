@@ -1,8 +1,6 @@
 PODS:
-  - CKShapeView (0.1.2)
   - JRSwizzle (1.0)
-  - TNKRefreshControl (0.1.1):
-    - CKShapeView (~> 0.1)
+  - TNKRefreshControl (0.1.4):
     - JRSwizzle (~> 1.0)
 
 DEPENDENCIES:
@@ -10,11 +8,10 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   TNKRefreshControl:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  CKShapeView: 92592c9c227ff0a6f6644aca746a74a7984cea3b
-  JRSwizzle: 30da7a2c539a4ebf954b16d15f6dd8221c9f6fa5
-  TNKRefreshControl: 2aad5127c89088f1216667d93eee0d4308d65237
+  JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
+  TNKRefreshControl: 75a78115637a29df6f8e9c2a472c6d9a535dcba5
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.38.2

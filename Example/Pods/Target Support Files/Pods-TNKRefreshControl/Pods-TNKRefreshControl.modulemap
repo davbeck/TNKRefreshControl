@@ -1,0 +1,6 @@
+framework module Pods_TNKRefreshControl {
+  umbrella header "Pods-TNKRefreshControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

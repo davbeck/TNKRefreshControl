@@ -8,13 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+
+IB_DESIGNABLE
 @interface TNKActivityIndicatorView : UIView
 
 /** The current progress indicated when not animating
  
  When the indicator view is not animating, it shows the progress as a percentage of the circle. Setting this to 0 (the default) will have the affect of hiding the view when it isn't animating.
  */
-@property (nonatomic) CGFloat progress;
+@property (nonatomic) IBInspectable CGFloat progress;
+
+/** Set the current progress with an optional animation
+ 
+ Changes the current progress to the new value, optionally animating to the new value.
+ 
+ @param progress The new progress
+ @param animated Controls whether the change is animated or not.
+ */
+- (void)setProgress:(CGFloat)progress animated:(BOOL)animated;
 
 
 /** Starts the animation of the progress indicator.
@@ -61,6 +72,6 @@
  
  This property is YES until the fade away animation has finished, or immediately after calling `-stopAnimatingWithFadeAwayAnimation:completion:` with NO.
  */
-@property (nonatomic, readonly, getter=isAnimating) BOOL animating;
+@property (nonatomic, readonly, getter=isAnimating) IBInspectable BOOL animating;
 
 @end

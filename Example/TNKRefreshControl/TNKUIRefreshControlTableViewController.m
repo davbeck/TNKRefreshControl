@@ -8,7 +8,7 @@
 
 #import "TNKUIRefreshControlTableViewController.h"
 
-#import "TNKRefreshControl-Swift.h"
+#import "TNKRefreshControlExample-Swift.h"
 
 
 @interface TNKUIRefreshControlTableViewController ()
@@ -69,8 +69,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DateCell" forIndexPath:indexPath];
     
-    NSDate *date = _objectSource.objects[indexPath.row];
-    cell.textLabel.text = date.description;
+    NSObject *item = _objectSource.objects[indexPath.row];
+    cell.textLabel.text = item.description;
     
     return cell;
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1177FA0D1A68226000055BC2 /* TNKAdvancedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177FA0C1A68226000055BC2 /* TNKAdvancedViewController.swift */; };
 		1177FA0F1A68354800055BC2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1177FA0E1A68354800055BC2 /* LaunchScreen.xib */; };
+		11AF5A921B78F6380008D7D9 /* TNKProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF5A911B78F6380008D7D9 /* TNKProgressViewController.m */; };
 		11DFEEF41A65A08C00355CBF /* TNKBasicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DFEEF31A65A08C00355CBF /* TNKBasicTableViewController.m */; };
 		11DFEEF71A65A15400355CBF /* TNKDateSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DFEEF61A65A15400355CBF /* TNKDateSource.swift */; };
 		11FBC6F81A65AC700052508D /* TNKUIRefreshControlTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FBC6F71A65AC700052508D /* TNKUIRefreshControlTableViewController.m */; };
@@ -25,8 +26,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		65E951240AE67813CDE65239 /* libPods-TNKRefreshControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D21F694E111C463BA058B9 /* libPods-TNKRefreshControl.a */; };
-		B035188E405DEA1E9E3554A5 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8963DCF313C5BE60FFC6DD7B /* libPods-Tests.a */; };
+		9D54ED8823EF8B828390D4A6 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C3BE290084546977F294CF /* Pods_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		ABA7304ECCFD747F32AE0867 /* Pods_TNKRefreshControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF40AAF41847DE94E39BC44C /* Pods_TNKRefreshControl.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 /* Begin PBXFileReference section */
 		1177FA0C1A68226000055BC2 /* TNKAdvancedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TNKAdvancedViewController.swift; sourceTree = "<group>"; };
 		1177FA0E1A68354800055BC2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		11AF5A901B78F6380008D7D9 /* TNKProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNKProgressViewController.h; sourceTree = "<group>"; };
+		11AF5A911B78F6380008D7D9 /* TNKProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNKProgressViewController.m; sourceTree = "<group>"; };
 		11DFEEF21A65A08C00355CBF /* TNKBasicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNKBasicTableViewController.h; sourceTree = "<group>"; };
 		11DFEEF31A65A08C00355CBF /* TNKBasicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNKBasicTableViewController.m; sourceTree = "<group>"; };
 		11DFEEF51A65A15300355CBF /* TNKRefreshControl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TNKRefreshControl-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -49,7 +52,7 @@
 		11FBC6F61A65AC700052508D /* TNKUIRefreshControlTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNKUIRefreshControlTableViewController.h; sourceTree = "<group>"; };
 		11FBC6F71A65AC700052508D /* TNKUIRefreshControlTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNKUIRefreshControlTableViewController.m; sourceTree = "<group>"; };
 		272451308FC8660151D51633 /* TNKRefreshControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TNKRefreshControl.podspec; path = ../TNKRefreshControl.podspec; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* TNKRefreshControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNKRefreshControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58A195388D20070C39A /* TNKRefreshControlExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNKRefreshControlExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -71,10 +74,10 @@
 		65F497A70591108F83F0BDDC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7409D832634A8B89FB93F3C4 /* Pods-TNKRefreshControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNKRefreshControl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TNKRefreshControl/Pods-TNKRefreshControl.debug.xcconfig"; sourceTree = "<group>"; };
 		84464399AF85705D95C49A98 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		8963DCF313C5BE60FFC6DD7B /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		89D21F694E111C463BA058B9 /* libPods-TNKRefreshControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TNKRefreshControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8738A82144ACA5616B3376 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		93C3BE290084546977F294CF /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60644904056B720A69893A9 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		EF40AAF41847DE94E39BC44C /* Pods_TNKRefreshControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TNKRefreshControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +88,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				65E951240AE67813CDE65239 /* libPods-TNKRefreshControl.a in Frameworks */,
+				ABA7304ECCFD747F32AE0867 /* Pods_TNKRefreshControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +99,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				B035188E405DEA1E9E3554A5 /* libPods-Tests.a in Frameworks */,
+				9D54ED8823EF8B828390D4A6 /* Pods_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +121,7 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* TNKRefreshControl.app */,
+				6003F58A195388D20070C39A /* TNKRefreshControlExample.app */,
 				6003F5AE195388D20070C39A /* Tests.xctest */,
 			);
 			name = Products;
@@ -131,8 +134,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				89D21F694E111C463BA058B9 /* libPods-TNKRefreshControl.a */,
-				8963DCF313C5BE60FFC6DD7B /* libPods-Tests.a */,
+				EF40AAF41847DE94E39BC44C /* Pods_TNKRefreshControl.framework */,
+				93C3BE290084546977F294CF /* Pods_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,6 +152,8 @@
 				11FBC6F61A65AC700052508D /* TNKUIRefreshControlTableViewController.h */,
 				11FBC6F71A65AC700052508D /* TNKUIRefreshControlTableViewController.m */,
 				11DFEEF61A65A15400355CBF /* TNKDateSource.swift */,
+				11AF5A901B78F6380008D7D9 /* TNKProgressViewController.h */,
+				11AF5A911B78F6380008D7D9 /* TNKProgressViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				1177FA0E1A68354800055BC2 /* LaunchScreen.xib */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -211,23 +216,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6003F589195388D20070C39A /* TNKRefreshControl */ = {
+		6003F589195388D20070C39A /* TNKRefreshControlExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "TNKRefreshControl" */;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "TNKRefreshControlExample" */;
 			buildPhases = (
 				0AD889A1BD2CD5F4B88B40DD /* Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				98BBB0ACE7EB8D79E3A08FDE /* Copy Pods Resources */,
+				223267E405D1F3B3A8238DA3 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TNKRefreshControl;
+			name = TNKRefreshControlExample;
 			productName = TNKRefreshControl;
-			productReference = 6003F58A195388D20070C39A /* TNKRefreshControl.app */;
+			productReference = 6003F58A195388D20070C39A /* TNKRefreshControlExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* Tests */ = {
@@ -239,6 +245,7 @@
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
 				B3BAC72402D0B037ABE4DFD5 /* Copy Pods Resources */,
+				BFB3775ACB77CB115625C335 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,7 +264,9 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = TNK;
-				LastUpgradeCheck = 0510;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "David Beck";
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
@@ -278,7 +287,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6003F589195388D20070C39A /* TNKRefreshControl */,
+				6003F589195388D20070C39A /* TNKRefreshControlExample */,
 				6003F5AD195388D20070C39A /* Tests */,
 			);
 		};
@@ -320,6 +329,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		223267E405D1F3B3A8238DA3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TNKRefreshControl/Pods-TNKRefreshControl-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		70C154525D6F265E21FD4E27 /* Check Pods Manifest.lock */ = {
@@ -367,6 +391,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BFB3775ACB77CB115625C335 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -375,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1177FA0D1A68226000055BC2 /* TNKAdvancedViewController.swift in Sources */,
+				11AF5A921B78F6380008D7D9 /* TNKProgressViewController.m in Sources */,
 				6003F59E195388D20070C39A /* TNKAppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				11DFEEF71A65A15400355CBF /* TNKDateSource.swift in Sources */,
@@ -396,7 +436,7 @@
 /* Begin PBXTargetDependency section */
 		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6003F589195388D20070C39A /* TNKRefreshControl */;
+			target = 6003F589195388D20070C39A /* TNKRefreshControlExample */;
 			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -447,6 +487,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -512,6 +553,7 @@
 				INFOPLIST_FILE = "TNKRefreshControl/TNKRefreshControl-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TNKRefreshControl/TNKRefreshControl-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -530,6 +572,7 @@
 				INFOPLIST_FILE = "TNKRefreshControl/TNKRefreshControl-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TNKRefreshControl/TNKRefreshControl-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
@@ -553,6 +596,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -572,6 +616,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -590,7 +635,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "TNKRefreshControl" */ = {
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "TNKRefreshControlExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5C0195388D20070C39A /* Debug */,

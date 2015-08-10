@@ -8,17 +8,14 @@
 
 #import "TNKActivityIndicatorView.h"
 
-#import <CKShapeView/CKShapeView.h>
-
 
 #define TNKActivityIndicatorViewLineWidth (2.0)
 
 
 @interface TNKActivityIndicatorView ()
 {
-    CKShapeView *_spinnerView;
-    CGAffineTransform _defaultTransform;
-    
+	CAShapeLayer *_spinnerView;
+	
     BOOL _animating;
 }
 
@@ -30,20 +27,40 @@
 
 - (void)setProgress:(CGFloat)progress
 {
-    _progress = MAX(MIN(progress, 1.0), 0.0);
-    
-    [self _updateProgress];
+	[self setProgress:progress animated:NO];
 }
 
-- (void)_updateProgress
+- (void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
-    [CATransaction setDisableActions:YES];
-    if (!_animating) {
-        _spinnerView.strokeEnd = 0.9 * _progress + _spinnerView.strokeStart;
-    } else {
-        _spinnerView.strokeEnd = 0.95;
-    }
-    [CATransaction setDisableActions:NO];
+	_progress = MAX(MIN(progress, 1.0), 0.0);
+	
+	[self _updateProgressAnimated:animated];
+}
+
+- (void)_updateProgressAnimated:(BOOL)animated
+{
+	CGFloat progress = 0.0;
+	if (!_animating) {
+		progress = 0.9 * _progress + _spinnerView.strokeStart;
+	} else {
+		progress = 0.95;
+	}
+	
+	
+	if (animated) {
+		CABasicAnimation *strokeEnd = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+		strokeEnd.fromValue = [_spinnerView.presentationLayer valueForKey:@"strokeEnd"];
+		strokeEnd.toValue = @(progress);
+		strokeEnd.duration = 0.2;
+		strokeEnd.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+		
+		[_spinnerView addAnimation:strokeEnd forKey:@"update progress"];
+		_spinnerView.strokeEnd = progress;
+	} else {
+		[CATransaction setDisableActions:YES];
+		_spinnerView.strokeEnd = progress;
+		[CATransaction setDisableActions:NO];
+	}
 }
 
 - (BOOL)isAnimating
@@ -55,7 +72,7 @@
 {
     [super tintColorDidChange];
     
-    _spinnerView.strokeColor = self.tintColor;
+    _spinnerView.strokeColor = self.tintColor.CGColor;
 }
 
 
@@ -65,17 +82,30 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _defaultTransform = CGAffineTransformMakeRotation(-M_PI_2);
-        
-        _spinnerView = [CKShapeView new];
-        _spinnerView.fillColor = [UIColor clearColor];
-        _spinnerView.strokeColor = self.tintColor;
+        _spinnerView = [CAShapeLayer new];
+        _spinnerView.fillColor = [UIColor clearColor].CGColor;
+        _spinnerView.strokeColor = self.tintColor.CGColor;
         _spinnerView.strokeStart = 0.05;
-        _spinnerView.strokeEnd = 0.95;
-        _spinnerView.transform = _defaultTransform;
-        [self addSubview:_spinnerView];
+		_spinnerView.strokeEnd = 0.95;
+		_spinnerView.transform = CATransform3DMakeRotation(-M_PI_2, 0.0, 0.0, 1.0);
+        [self.layer addSublayer:_spinnerView];
     }
     return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+	self = [super initWithCoder:coder];
+	if (self) {
+		_spinnerView = [CAShapeLayer new];
+		_spinnerView.fillColor = [UIColor clearColor].CGColor;
+		_spinnerView.strokeColor = self.tintColor.CGColor;
+		_spinnerView.strokeStart = 0.05;
+		_spinnerView.strokeEnd = 0.95;
+		_spinnerView.transform = CATransform3DMakeRotation(-M_PI_2, 0.0, 0.0, 1.0);
+		[self.layer addSublayer:_spinnerView];
+	}
+	return self;
 }
 
 
@@ -96,13 +126,13 @@
     [super layoutSubviews];
     
     // because we are transforming this view all over the place, we can't set the frame
-    _spinnerView.bounds = self.bounds;
-    _spinnerView.center = CGPointMake(self.bounds.size.width / 2.0, self.bounds.size.height / 2.0);
+    _spinnerView.bounds = self.layer.bounds;
+    _spinnerView.position = CGPointMake(self.layer.bounds.size.width / 2.0, self.layer.bounds.size.height / 2.0);
     
     CGRect pathRect = CGRectInset(_spinnerView.bounds, TNKActivityIndicatorViewLineWidth / 2.0, TNKActivityIndicatorViewLineWidth / 2.0);
     UIBezierPath *path = path = [UIBezierPath bezierPathWithOvalInRect:pathRect];
     path.lineWidth = TNKActivityIndicatorViewLineWidth;
-    _spinnerView.path = path;
+    _spinnerView.path = path.CGPath;
 }
 
 
@@ -118,26 +148,34 @@
     if (!_animating) {
         _animating = YES;
         
-        [self _updateProgress];
+        [self _updateProgressAnimated:YES];
         
         CABasicAnimation *refreshingAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
         refreshingAnimation.duration = 1.0;
         refreshingAnimation.repeatCount = CGFLOAT_MAX;
         refreshingAnimation.fromValue = @(-M_PI_2);
-        refreshingAnimation.toValue = @(M_PI * 2.0 - M_PI_2);
-        [_spinnerView.layer addAnimation:refreshingAnimation forKey:@"refreshing"];
+        refreshingAnimation.byValue = @(M_PI * 2.0);
+        [_spinnerView addAnimation:refreshingAnimation forKey:@"refreshing"];
         
         if (animated) {
-            _spinnerView.alpha = 0.0;
-            
-            [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                _spinnerView.alpha = 1.0;
-                _spinnerView.transform = _defaultTransform;
-            } completion:^(BOOL finished) {
-                if (completion != nil) {
-                    completion();
-                }
-            }];
+			[CATransaction begin]; {
+				[CATransaction setCompletionBlock:completion];
+				
+				CABasicAnimation *opacity = [CABasicAnimation animationWithKeyPath:@"opacity"];
+				opacity.fromValue = @0.0;
+				opacity.toValue = @1.0;
+				
+				CABasicAnimation *transform = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+				transform.fromValue = @0.0;
+				transform.toValue = @1.0;
+				
+				CAAnimationGroup *both = [CAAnimationGroup animation];
+				both.duration = 0.2;
+				both.animations = @[opacity, transform];
+				both.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+				
+				[_spinnerView addAnimation:both forKey:@"start animating fade in"];
+			} [CATransaction commit];
         }
     }
 }
@@ -151,25 +189,44 @@
 {
     if (_animating) {
         if (animated) {
-            [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                _spinnerView.alpha = 0.0;
-                _spinnerView.transform = CGAffineTransformMakeScale(0.1, 0.1);
-            } completion:^(BOOL finished) {
-                _spinnerView.alpha = 1.0;
-                _spinnerView.transform = _defaultTransform;
-                
-                _animating = NO;
-                [_spinnerView.layer removeAnimationForKey:@"refreshing"];
-                [self _updateProgress];
-                
-                if (completion != nil) {
-                    completion();
-                }
-            }];
+			[CATransaction begin]; {
+				[CATransaction setCompletionBlock:^{
+					[_spinnerView removeAnimationForKey:@"refreshing"];
+					_animating = NO;
+					[self _updateProgressAnimated:NO];
+					
+					if (completion != nil) {
+						completion();
+					}
+				}];
+				
+				CABasicAnimation *opacity = [CABasicAnimation animationWithKeyPath:@"opacity"];
+				opacity.fromValue = @1.0;
+				opacity.toValue = @0.0;
+				
+				CABasicAnimation *transform = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+				transform.fromValue = @1.0;
+				transform.toValue = @0.0;
+				
+				CAAnimationGroup *both = [CAAnimationGroup animation];
+				both.duration = 0.5;
+				both.animations = @[opacity, transform];
+				both.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+				
+				[_spinnerView addAnimation:both forKey:@"stop animating fade out"];
+			} [CATransaction commit];
         } else {
+			CABasicAnimation *rotation = [CABasicAnimation animationWithKeyPath:@"transform"];
+			rotation.fromValue = [_spinnerView.presentationLayer valueForKey:@"transform"];
+			rotation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-M_PI_2, 0.0, 0.0, 1.0)];
+			rotation.duration = 0.2;
+			rotation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+			
+			[_spinnerView removeAnimationForKey:@"refreshing"];
+			[_spinnerView addAnimation:rotation forKey:@"stop animating"];
+			
             _animating = NO;
-            [_spinnerView.layer removeAnimationForKey:@"refreshing"];
-            [self _updateProgress];
+            [self _updateProgressAnimated:YES];
             
             if (completion != nil) {
                 completion();
