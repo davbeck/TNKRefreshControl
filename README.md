@@ -13,7 +13,7 @@ and uses a more modern look.
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-See the [documentation](http://cocoadocs.org/docsets/TNKRefreshController/) for more details.
+See the [documentation](http://cocoadocs.org/docsets/TNKRefreshControl/) for more details.
 
 Instead of setting refreshControl on a UITableViewController, you create and set a TNKRefreshControl on any UIScrollView or UIScrollView subclass like UITableView.
 
