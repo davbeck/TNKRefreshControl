@@ -179,10 +179,10 @@ static void *TNKScrollViewContext = &TNKScrollViewContext;
 	
 	if (self.enabled) {
 		if (self.visible) {
-			[self.activityIndicatorView startAnimatingWithFadeInAnimation:NO completion:nil];
+			[_activityIndicatorView startAnimatingWithFadeInAnimation:NO completion:nil];
 			[self sendActionsForControlEvents:UIControlEventValueChanged];
 		} else {
-			[self.activityIndicatorView stopAnimatingWithFadeAwayAnimation:NO completion:nil];
+			[_activityIndicatorView stopAnimatingWithFadeAwayAnimation:NO completion:nil];
 		}
 	}
 }
@@ -196,7 +196,7 @@ static void *TNKScrollViewContext = &TNKScrollViewContext;
 		if (enabled) {
 			[self _layoutScrollView];
 		} else {
-			[self.activityIndicatorView stopAnimatingWithFadeAwayAnimation:YES completion:nil];
+			[_activityIndicatorView stopAnimatingWithFadeAwayAnimation:YES completion:nil];
 			[self _layoutScrollView];
 			[self _scrollToBottomIfNeeded];
 		}
