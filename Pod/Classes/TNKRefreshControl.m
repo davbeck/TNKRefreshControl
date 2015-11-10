@@ -336,7 +336,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 - (void)TNK_layoutSubviews
 {
-    [self TNK_layoutSubviews]; // this will call viewWillAppear implementation, because we have exchanged them.
+    [self TNK_layoutSubviews]; // this will call layoutSubviews implementation, because we have exchanged them.
     
     
     // UITableView has a nasty habbit of placing it's section headers below contentInset

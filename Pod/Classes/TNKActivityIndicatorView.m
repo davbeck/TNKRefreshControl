@@ -192,7 +192,7 @@
 			[CATransaction begin]; {
 				[CATransaction setCompletionBlock:^{
 					[_spinnerView removeAnimationForKey:@"refreshing"];
-					_animating = NO;
+					
 					[self _updateProgressAnimated:NO];
 					
 					if (completion != nil) {
@@ -225,13 +225,14 @@
 			[_spinnerView removeAnimationForKey:@"refreshing"];
 			[_spinnerView addAnimation:rotation forKey:@"stop animating"];
 			
-            _animating = NO;
             [self _updateProgressAnimated:YES];
             
             if (completion != nil) {
                 completion();
             }
         }
+		
+		_animating = NO;
     }
 }
 
