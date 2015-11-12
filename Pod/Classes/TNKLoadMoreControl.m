@@ -29,7 +29,7 @@ static void *TNKScrollViewContext = &TNKScrollViewContext;
 @implementation TNKLoadMoreControl
 
 - (BOOL)visible {
-	return CGRectIntersectsRect(self.scrollView.bounds, self.frame);
+	return self.scrollView != nil && CGRectIntersectsRect(self.scrollView.bounds, self.frame);
 }
 
 - (void)resetContentInset
