@@ -89,6 +89,8 @@
 		_spinnerView.strokeEnd = 0.95;
 		_spinnerView.transform = CATransform3DMakeRotation(-M_PI_2, 0.0, 0.0, 1.0);
         [self.layer addSublayer:_spinnerView];
+		
+		[self _updateProgressAnimated:NO];
     }
     return self;
 }
@@ -104,6 +106,8 @@
 		_spinnerView.strokeEnd = 0.95;
 		_spinnerView.transform = CATransform3DMakeRotation(-M_PI_2, 0.0, 0.0, 1.0);
 		[self.layer addSublayer:_spinnerView];
+		
+		[self _updateProgressAnimated:NO];
 	}
 	return self;
 }
