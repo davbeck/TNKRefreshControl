@@ -22,8 +22,6 @@ static void *TNKScrollViewContext = &TNKScrollViewContext;
 	BOOL _ignoreOffsetChanged;// sometimes we aren't done yet
 }
 
-@property (nonatomic) UIEdgeInsets addedContentInset;
-
 @end
 
 @implementation TNKLoadMoreControl

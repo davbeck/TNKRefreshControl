@@ -26,6 +26,20 @@
  */
 @property (nonatomic, readonly, weak, nullable) UIScrollView *scrollView;
 
+/** The amount of insets added to the scrollView.
+ 
+ The control will do it's best to maintain a delta of what it has added to the scorllView's contentInsets. That way, as other code adds and removes insets, we keep track of only what we are responsible fore. Subclasses may override this property to customize how the inset is added.
+ */
+@property (nonatomic) UIEdgeInsets addedContentInset;
+
+/** Restore the scrollView's content inset
+ 
+ This method will remove any added content inset, reseting the value to what it was before we changed it. This method should be considered internal and only used by subclasses that change the inset behavior.
+ 
+ @see addedInsets
+ */
+- (void)resetContentInset;
+
 @end
 
 
