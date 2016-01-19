@@ -7,17 +7,10 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "David Beck" => "code@thinkultimate.com" }
   s.source           = { :git => "https://github.com/davbeck/TNKRefreshControl.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/davbeck'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes'
-  s.resource_bundles = {
-    'TNKRefreshControl' => ['Pod/Assets/*.png']
-  }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'JRSwizzle', '~> 1.0'
+  s.source_files = 'TNKRefreshControl/*.{h,m}'
 end
