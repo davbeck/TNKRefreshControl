@@ -29,7 +29,7 @@ class TNKAdvancedViewController: UICollectionViewController {
         
         self.collectionView?.refreshControl = TNKRefreshControl()
         self.collectionView?.refreshControl.tintColor = UIColor.whiteColor()
-        self.collectionView?.refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
+        self.collectionView?.refreshControl.addTarget(self, action: #selector(refresh), forControlEvents: .ValueChanged)
     }
     
     override func viewWillAppear(animated: Bool) {

@@ -27,7 +27,7 @@ class TNKDateSource: NSObject {
         NSTimer.scheduledTimerWithTimeInterval(10.0, repeats: false) { (timer) in
             var newObjects: [NSObject] = []
             for _ in 0..<5 {
-                self.highestNumber++
+                self.highestNumber += 1
                 newObjects.insert(self.highestNumber, atIndex: 0)
             }
             
