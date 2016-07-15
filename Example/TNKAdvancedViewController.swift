@@ -27,9 +27,9 @@ class TNKAdvancedViewController: UICollectionViewController {
         
         self.collectionView?.alwaysBounceVertical = true
         
-        self.collectionView?.refreshControl = TNKRefreshControl()
-        self.collectionView?.refreshControl.tintColor = UIColor.whiteColor()
-        self.collectionView?.refreshControl.addTarget(self, action: #selector(refresh), forControlEvents: .ValueChanged)
+        self.collectionView?.tnk_refreshControl = TNKRefreshControl()
+        self.collectionView?.tnk_refreshControl.tintColor = UIColor.whiteColor()
+        self.collectionView?.tnk_refreshControl.addTarget(self, action: #selector(refresh), forControlEvents: .ValueChanged)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -44,10 +44,10 @@ class TNKAdvancedViewController: UICollectionViewController {
     // MARK: - Actions
     
     @IBAction func refresh(sender: AnyObject?) {
-        self.collectionView?.refreshControl.beginRefreshing()
+        self.collectionView?.tnk_refreshControl.beginRefreshing()
         
         self.objectSource.loadNewObjects { (newObjects) in
-            self.collectionView?.refreshControl.endRefreshing()
+            self.collectionView?.tnk_refreshControl.endRefreshing()
             
             var indexPaths: [NSIndexPath] = []
 			for _ in newObjects {

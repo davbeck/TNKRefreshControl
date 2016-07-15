@@ -288,18 +288,18 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 @implementation UIScrollView (TNKRefreshControl)
 
-- (void)setRefreshControl:(TNKRefreshControl *)refreshControl
+- (void)tnk_setRefreshControl:(TNKRefreshControl *)refreshControl
 {
-    [self.refreshControl removeFromSuperview];
+    [self.tnk_refreshControl removeFromSuperview];
     
     objc_setAssociatedObject(self, @selector(refreshControl), refreshControl, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     [self insertSubview:refreshControl atIndex:0];
 }
 
-- (TNKRefreshControl *)refreshControl
+- (TNKRefreshControl *)tnk_refreshControl
 {
-    return objc_getAssociatedObject(self, @selector(refreshControl));
+    return objc_getAssociatedObject(self, @selector(tnk_refreshControl));
 }
 
 @end
@@ -307,10 +307,10 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 @implementation UITableView (TNKRefreshControl)
 
-- (void)setRefreshControl:(TNKRefreshControl *)refreshControl
+- (void)tnk_setRefreshControl:(TNKRefreshControl *)refreshControl
 {
-    if (self.refreshControl != refreshControl) {
-        [super setRefreshControl:refreshControl];
+    if (self.tnk_refreshControl != refreshControl) {
+        [super tnk_setRefreshControl:refreshControl];
         
         if (self.backgroundView != nil) {
             [self insertSubview:refreshControl aboveSubview:self.backgroundView];
@@ -323,9 +323,9 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 @implementation UICollectionView (TNKRefreshControl)
 
-- (void)setRefreshControl:(TNKRefreshControl *)refreshControl
+- (void)tnk_setRefreshControl:(TNKRefreshControl *)refreshControl
 {
-    [super setRefreshControl:refreshControl];
+    [super tnk_setRefreshControl:refreshControl];
     
     if (self.backgroundView != nil) {
         [self insertSubview:refreshControl aboveSubview:self.backgroundView];

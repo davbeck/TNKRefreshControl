@@ -25,8 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.refreshControl = [TNKRefreshControl new];
-    [self.tableView.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    self.tableView.tnk_refreshControl = [TNKRefreshControl new];
+    [self.tableView.tnk_refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     
     _objectSource = [TNKDateSource new];
     _objectSource.objects = @[@"000"];
@@ -35,7 +35,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self.tableView.refreshControl beginRefreshing];
+    [self.tableView.tnk_refreshControl beginRefreshing];
     
     [self refresh:nil];
 }
@@ -44,13 +44,13 @@
 #pragma mark - Actions
 
 - (IBAction)refresh:(id)sender {
-    [self.tableView.refreshControl beginRefreshing];
+    [self.tableView.tnk_refreshControl beginRefreshing];
     
     [_objectSource loadNewObjects:^(NSArray *newDates) {
         CGPoint offset = self.tableView.contentOffset;
         [self.tableView reloadData];
         self.tableView.contentOffset = offset;
-        [self.tableView.refreshControl endRefreshing];
+        [self.tableView.tnk_refreshControl endRefreshing];
     }];
 }
 

@@ -83,6 +83,6 @@ FOUNDATION_EXPORT const unsigned char TNKRefreshControlVersionString[];
  
  When the user initiates a refresh operation, the control generates a UIControlEventValueChanged event. You must associate a target and action method with this event and use them to refresh your table’s contents.
  */
-@property (nonatomic, strong) TNKRefreshControl *refreshControl;
+@property (nonatomic, strong, setter=tnk_setRefreshControl:) TNKRefreshControl *tnk_refreshControl;
 
 @end
