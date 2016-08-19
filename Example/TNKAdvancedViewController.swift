@@ -27,12 +27,12 @@ class TNKAdvancedViewController: UICollectionViewController {
         
         self.collectionView?.alwaysBounceVertical = true
         
-        self.collectionView?.refreshControl = TNKRefreshControl()
-        self.collectionView?.refreshControl.tintColor = UIColor.whiteColor()
-        self.collectionView?.refreshControl.addTarget(self, action: #selector(refresh), forControlEvents: .ValueChanged)
+        self.collectionView?.tnkRefreshControl = TNKRefreshControl()
+        self.collectionView?.tnkRefreshControl?.tintColor = UIColor.white
+        self.collectionView?.tnkRefreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if self.objectSource.objects.count <= 0 {
@@ -43,18 +43,18 @@ class TNKAdvancedViewController: UICollectionViewController {
     
     // MARK: - Actions
     
-    @IBAction func refresh(sender: AnyObject?) {
-        self.collectionView?.refreshControl.beginRefreshing()
+    @IBAction func refresh(_ sender: AnyObject?) {
+        self.collectionView?.tnkRefreshControl?.beginRefreshing()
         
         self.objectSource.loadNewObjects { (newObjects) in
-            self.collectionView?.refreshControl.endRefreshing()
+            self.collectionView?.tnkRefreshControl?.endRefreshing()
             
-            var indexPaths: [NSIndexPath] = []
+            var indexPaths: [IndexPath] = []
 			for _ in newObjects {
-				indexPaths.append(NSIndexPath(forItem: 0, inSection: 0))
+				indexPaths.append(IndexPath(item: 0, section: 0))
             }
 			
-            self.collectionView?.insertItemsAtIndexPaths(indexPaths)
+            self.collectionView?.insertItems(at: indexPaths)
 //            self.collectionView?.reloadData()
         }
     }
@@ -67,19 +67,20 @@ class TNKAdvancedViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
-    }
+	override func numberOfSections(in collectionView: UICollectionView) -> Int {
+		return 1
+	}
 
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.objectSource.objects.count
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! TNKAdvancedCell
-        
-        cell.numberLabel.text = self.objectSource.objects[indexPath.item].description
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TNKAdvancedCell
+		
+		let item = self.objectSource.objects[indexPath.item]
+        cell.numberLabel.text = "\(item)"
         
         return cell
     }

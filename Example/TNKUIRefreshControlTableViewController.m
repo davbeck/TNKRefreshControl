@@ -42,12 +42,12 @@
 
 - (IBAction)refresh:(id)sender {
     [self.refreshControl beginRefreshing];
-    
-    [_objectSource loadNewObjects:^(NSArray *newDates) {
-        [self.refreshControl endRefreshing];
-        
-        [self.tableView reloadData];
-    }];
+	
+	[_objectSource loadNewObjectsWithCompletion:^(NSArray *newDates) {
+		[self.refreshControl endRefreshing];
+		
+		[self.tableView reloadData];
+	}];
 }
 
 - (IBAction)clear:(id)sender {

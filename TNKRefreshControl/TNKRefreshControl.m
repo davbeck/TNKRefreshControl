@@ -120,7 +120,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 {
     [super willMoveToSuperview:newSuperview];
     
-    // we have an awkward situation here when the scrollView is deallocated before setting self.refreshControl to nil
+    // we have an awkward situation here when the scrollView is deallocated before setting self.tnkRefreshControl to nil
     // our weak property is usually niled out by the time this is called, but odly self.superview is still correct
     // if we let the scrollView be autoreleased, it will be gone and deallocated by the time the autorelease pool is drained
     @autoreleasepool {
@@ -288,16 +288,16 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 @implementation UIScrollView (TNKRefreshControl)
 
-- (void)setRefreshControl:(TNKRefreshControl *)refreshControl
+- (void)setTnkRefreshControl:(TNKRefreshControl *)refreshControl
 {
-    [self.refreshControl removeFromSuperview];
+    [self.tnkRefreshControl removeFromSuperview];
     
     objc_setAssociatedObject(self, @selector(refreshControl), refreshControl, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     [self insertSubview:refreshControl atIndex:0];
 }
 
-- (TNKRefreshControl *)refreshControl
+- (TNKRefreshControl *)tnkRefreshControl
 {
     return objc_getAssociatedObject(self, @selector(refreshControl));
 }
@@ -307,10 +307,10 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 @implementation UITableView (TNKRefreshControl)
 
-- (void)setRefreshControl:(TNKRefreshControl *)refreshControl
+- (void)setTnkRefreshControl:(TNKRefreshControl *)refreshControl
 {
-    if (self.refreshControl != refreshControl) {
-        [super setRefreshControl:refreshControl];
+    if (self.tnkRefreshControl != refreshControl) {
+        [super setTnkRefreshControl:refreshControl];
         
         if (self.backgroundView != nil) {
             [self insertSubview:refreshControl aboveSubview:self.backgroundView];
@@ -323,9 +323,9 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 
 @implementation UICollectionView (TNKRefreshControl)
 
-- (void)setRefreshControl:(TNKRefreshControl *)refreshControl
+- (void)setTnkRefreshControl:(TNKRefreshControl *)refreshControl
 {
-    [super setRefreshControl:refreshControl];
+    [super setTnkRefreshControl:refreshControl];
     
     if (self.backgroundView != nil) {
         [self insertSubview:refreshControl aboveSubview:self.backgroundView];
