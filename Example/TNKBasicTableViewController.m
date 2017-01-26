@@ -46,7 +46,7 @@
 - (IBAction)refresh:(id)sender {
     [self.tableView.tnk_refreshControl beginRefreshing];
     
-    [_objectSource loadNewObjects:^(NSArray *newDates) {
+    [_objectSource loadNewObjectsWithCompletion:^(NSArray *newDates) {
         CGPoint offset = self.tableView.contentOffset;
         [self.tableView reloadData];
         self.tableView.contentOffset = offset;

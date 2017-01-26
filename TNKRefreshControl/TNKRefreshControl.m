@@ -120,7 +120,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 {
     [super willMoveToSuperview:newSuperview];
     
-    // we have an awkward situation here when the scrollView is deallocated before setting self.refreshControl to nil
+    // we have an awkward situation here when the scrollView is deallocated before setting self.tnkRefreshControl to nil
     // our weak property is usually niled out by the time this is called, but odly self.superview is still correct
     // if we let the scrollView be autoreleased, it will be gone and deallocated by the time the autorelease pool is drained
     @autoreleasepool {
@@ -292,7 +292,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 {
     [self.tnk_refreshControl removeFromSuperview];
     
-    objc_setAssociatedObject(self, @selector(refreshControl), refreshControl, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(tnk_refreshControl), refreshControl, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     [self insertSubview:refreshControl atIndex:0];
 }

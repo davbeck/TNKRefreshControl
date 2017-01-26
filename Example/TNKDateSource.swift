@@ -9,30 +9,24 @@
 import UIKit
 
 
-extension NSTimer {
-    class func scheduledTimerWithTimeInterval(interval: NSTimeInterval, repeats: Bool, handler: NSTimer! -> Void) -> NSTimer {
-        let fireDate = interval + CFAbsoluteTimeGetCurrent()
-        let repeatInterval = repeats ? interval : 0
-        let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, fireDate, repeatInterval, 0, 0, handler)
-        CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, kCFRunLoopCommonModes)
-        return timer
-    }
-}
-
 class TNKDateSource: NSObject {
-    var objects: [NSObject] = []
+    var objects: [Any] = []
     private var highestNumber = 0
+	private var completion: ((_ newObjects: [Any]) -> ())?
     
-    func loadNewObjects(completed: (newObjects: [NSObject]) -> ()) {
-        NSTimer.scheduledTimerWithTimeInterval(10.0, repeats: false) { (timer) in
-            var newObjects: [NSObject] = []
-            for _ in 0..<5 {
-                self.highestNumber += 1
-                newObjects.insert(self.highestNumber, atIndex: 0)
-            }
-            
-            self.objects = newObjects + self.objects
-            completed(newObjects: newObjects)
-        }
+    func loadNewObjects(completion: @escaping (_ newObjects: [Any]) -> ()) {
+		self.completion = completion
+		Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(objectsLoaded), userInfo: nil, repeats: false)
     }
+	
+	@objc private func objectsLoaded() {
+		var newObjects: [Any] = []
+		for _ in 0..<5 {
+			self.highestNumber += 1
+			newObjects.insert(self.highestNumber, at: 0)
+		}
+		
+		self.objects = newObjects + self.objects
+		completion?(newObjects)
+	}
 }
