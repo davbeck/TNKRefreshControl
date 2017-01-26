@@ -108,6 +108,7 @@
 				1130B2D21C4EB4700000D2DE /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		1130B2D21C4EB4700000D2DE /* Products */ = {
 			isa = PBXGroup;
