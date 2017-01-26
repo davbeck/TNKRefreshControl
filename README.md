@@ -19,18 +19,18 @@ See the [documentation](http://cocoadocs.org/docsets/TNKRefreshControl/) for mor
 Instead of setting refreshControl on a UITableViewController, you create and set a TNKRefreshControl on any UIScrollView or UIScrollView subclass like UITableView.
 
 ```objc
-self.tableView.refreshControl = [TNKRefreshControl new];
-[self.tableView.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+self.tableView.tnk_refreshControl = [TNKRefreshControl new];
+[self.tableView.tnk_refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
 ```
 
 From there, you can programatically activate the refresh control programatically with `beginRefreshing`. When you have finished loading content, make sure to call `endRefreshing`.
 
 ```objc
 - (IBAction)refresh:(id)sender {
-    [self.tableView.refreshControl beginRefreshing];
+    [self.tableView.tnk_refreshControl beginRefreshing];
     
     [_objectSource loadNewObjects:^(NSArray *newDates) {
-        [self.tableView.refreshControl endRefreshing];
+        [self.tableView.tnk_refreshControl endRefreshing];
         
         [self.tableView reloadData];
     }];
@@ -94,13 +94,13 @@ If you still need the fix for floating headers, you can include this code in you
     // UITableView has a nasty habbit of placing it's section headers below contentInset
     // We aren't changing that behavior, just adjusting for the inset that we added
     
-    if (self.refreshControl.addedContentInset.top != 0.0) {
+    if (self.tnk_refreshControl.addedContentInset.top != 0.0) {
         //http://b2cloud.com.au/tutorial/uitableview-section-header-positions/
         const NSUInteger numberOfSections = self.numberOfSections;
         const UIEdgeInsets contentInset = self.contentInset;
         const CGPoint contentOffset = self.contentOffset;
         
-        const CGFloat sectionViewMinimumOriginY = contentOffset.y + contentInset.top - self.refreshControl.addedContentInset.top;
+        const CGFloat sectionViewMinimumOriginY = contentOffset.y + contentInset.top - self.tnk_refreshControl.addedContentInset.top;
         
         //	Layout each header view
         for(NSUInteger section = 0; section < numberOfSections; section++)
