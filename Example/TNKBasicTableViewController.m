@@ -15,7 +15,7 @@
 
 @interface TNKBasicTableViewController ()
 {
-    TNKDateSource *_objectSource;
+	TNKDateSource *_objectSource;
 }
 
 @end
@@ -23,65 +23,65 @@
 @implementation TNKBasicTableViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.tableView.tnk_refreshControl = [TNKRefreshControl new];
-    [self.tableView.tnk_refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
-    
-    _objectSource = [TNKDateSource new];
-    _objectSource.objects = @[@"000"];
+	[super viewDidLoad];
+	
+	self.tableView.tnk_refreshControl = [TNKRefreshControl new];
+	[self.tableView.tnk_refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+	
+	_objectSource = [TNKDateSource new];
+	_objectSource.objects = @[@"000"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.tableView.tnk_refreshControl beginRefreshing];
-    
-    [self refresh:nil];
+	[super viewWillAppear:animated];
+	
+	[self.tableView.tnk_refreshControl beginRefreshing];
+	
+	[self refresh:nil];
 }
 
 
 #pragma mark - Actions
 
 - (IBAction)refresh:(id)sender {
-    [self.tableView.tnk_refreshControl beginRefreshing];
-    
-    [_objectSource loadNewObjectsWithCompletion:^(NSArray *newDates) {
-        CGPoint offset = self.tableView.contentOffset;
-        [self.tableView reloadData];
-        self.tableView.contentOffset = offset;
-        [self.tableView.tnk_refreshControl endRefreshing];
-    }];
+	[self.tableView.tnk_refreshControl beginRefreshing];
+	
+	[_objectSource loadNewObjectsWithCompletion:^(NSArray *newDates) {
+		CGPoint offset = self.tableView.contentOffset;
+		[self.tableView reloadData];
+		self.tableView.contentOffset = offset;
+		[self.tableView.tnk_refreshControl endRefreshing];
+	}];
 }
 
 - (IBAction)clear:(id)sender {
-    _objectSource.objects = @[];
-    [self.tableView reloadData];
+	_objectSource.objects = @[];
+	[self.tableView reloadData];
 }
 
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+	return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _objectSource.objects.count;
+	return _objectSource.objects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DateCell" forIndexPath:indexPath];
-    
-    NSObject *item = _objectSource.objects[indexPath.row];
-    cell.textLabel.text = item.description;
-    
-    return cell;
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DateCell" forIndexPath:indexPath];
+	
+	NSObject *item = _objectSource.objects[indexPath.row];
+	cell.textLabel.text = item.description;
+	
+	return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return NSLocalizedString(@"Section Header", nil);
+	return NSLocalizedString(@"Section Header", nil);
 }
 
 @end

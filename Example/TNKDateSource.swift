@@ -10,14 +10,14 @@ import UIKit
 
 
 class TNKDateSource: NSObject {
-    var objects: [Any] = []
-    private var highestNumber = 0
+	var objects: [Any] = []
+	private var highestNumber = 0
 	private var completion: ((_ newObjects: [Any]) -> ())?
-    
-    func loadNewObjects(completion: @escaping (_ newObjects: [Any]) -> ()) {
+	
+	func loadNewObjects(completion: @escaping (_ newObjects: [Any]) -> ()) {
 		self.completion = completion
 		Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(objectsLoaded), userInfo: nil, repeats: false)
-    }
+	}
 	
 	@objc private func objectsLoaded() {
 		var newObjects: [Any] = []

@@ -16,7 +16,7 @@
 {
 	CAShapeLayer *_spinnerView;
 	
-    BOOL _animating;
+	BOOL _animating;
 }
 
 @end
@@ -65,14 +65,14 @@
 
 - (BOOL)isAnimating
 {
-    return _animating;
+	return _animating;
 }
 
 - (void)tintColorDidChange
 {
-    [super tintColorDidChange];
-    
-    _spinnerView.strokeColor = self.tintColor.CGColor;
+	[super tintColorDidChange];
+	
+	_spinnerView.strokeColor = self.tintColor.CGColor;
 }
 
 
@@ -80,19 +80,19 @@
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        _spinnerView = [CAShapeLayer new];
-        _spinnerView.fillColor = [UIColor clearColor].CGColor;
-        _spinnerView.strokeColor = self.tintColor.CGColor;
-        _spinnerView.strokeStart = 0.05;
+	self = [super initWithFrame:frame];
+	if (self) {
+		_spinnerView = [CAShapeLayer new];
+		_spinnerView.fillColor = [UIColor clearColor].CGColor;
+		_spinnerView.strokeColor = self.tintColor.CGColor;
+		_spinnerView.strokeStart = 0.05;
 		_spinnerView.strokeEnd = 0.95;
 		_spinnerView.transform = CATransform3DMakeRotation(-M_PI_2, 0.0, 0.0, 1.0);
-        [self.layer addSublayer:_spinnerView];
+		[self.layer addSublayer:_spinnerView];
 		
 		[self _updateProgressAnimated:NO];
-    }
-    return self;
+	}
+	return self;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder
@@ -117,26 +117,26 @@
 
 - (CGSize)intrinsicContentSize
 {
-    return CGSizeMake(34.0, 34.0);
+	return CGSizeMake(34.0, 34.0);
 }
 
 - (CGSize)sizeThatFits:(CGSize)size
 {
-    return self.intrinsicContentSize;
+	return self.intrinsicContentSize;
 }
 
 - (void)layoutSubviews
 {
-    [super layoutSubviews];
-    
-    // because we are transforming this view all over the place, we can't set the frame
-    _spinnerView.bounds = self.layer.bounds;
-    _spinnerView.position = CGPointMake(self.layer.bounds.size.width / 2.0, self.layer.bounds.size.height / 2.0);
-    
-    CGRect pathRect = CGRectInset(_spinnerView.bounds, TNKActivityIndicatorViewLineWidth / 2.0, TNKActivityIndicatorViewLineWidth / 2.0);
-    UIBezierPath *path = path = [UIBezierPath bezierPathWithOvalInRect:pathRect];
-    path.lineWidth = TNKActivityIndicatorViewLineWidth;
-    _spinnerView.path = path.CGPath;
+	[super layoutSubviews];
+	
+	// because we are transforming this view all over the place, we can't set the frame
+	_spinnerView.bounds = self.layer.bounds;
+	_spinnerView.position = CGPointMake(self.layer.bounds.size.width / 2.0, self.layer.bounds.size.height / 2.0);
+	
+	CGRect pathRect = CGRectInset(_spinnerView.bounds, TNKActivityIndicatorViewLineWidth / 2.0, TNKActivityIndicatorViewLineWidth / 2.0);
+	UIBezierPath *path = path = [UIBezierPath bezierPathWithOvalInRect:pathRect];
+	path.lineWidth = TNKActivityIndicatorViewLineWidth;
+	_spinnerView.path = path.CGPath;
 }
 
 
@@ -144,24 +144,24 @@
 
 - (void)startAnimating
 {
-    [self startAnimatingWithFadeInAnimation:self.progress <= 0.0 completion:nil];
+	[self startAnimatingWithFadeInAnimation:self.progress <= 0.0 completion:nil];
 }
 
 - (void)startAnimatingWithFadeInAnimation:(BOOL)animated completion:(void (^)())completion
 {
-    if (!_animating) {
-        _animating = YES;
-        
-        [self _updateProgressAnimated:YES];
-        
-        CABasicAnimation *refreshingAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-        refreshingAnimation.duration = 1.0;
-        refreshingAnimation.repeatCount = CGFLOAT_MAX;
-        refreshingAnimation.fromValue = @(-M_PI_2);
-        refreshingAnimation.byValue = @(M_PI * 2.0);
-        [_spinnerView addAnimation:refreshingAnimation forKey:@"refreshing"];
-        
-        if (animated) {
+	if (!_animating) {
+		_animating = YES;
+		
+		[self _updateProgressAnimated:YES];
+		
+		CABasicAnimation *refreshingAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+		refreshingAnimation.duration = 1.0;
+		refreshingAnimation.repeatCount = CGFLOAT_MAX;
+		refreshingAnimation.fromValue = @(-M_PI_2);
+		refreshingAnimation.byValue = @(M_PI * 2.0);
+		[_spinnerView addAnimation:refreshingAnimation forKey:@"refreshing"];
+		
+		if (animated) {
 			[CATransaction begin]; {
 				[CATransaction setCompletionBlock:completion];
 				
@@ -180,19 +180,19 @@
 				
 				[_spinnerView addAnimation:both forKey:@"start animating fade in"];
 			} [CATransaction commit];
-        }
-    }
+		}
+	}
 }
 
 - (void)stopAnimating
 {
-    [self stopAnimatingWithFadeAwayAnimation:YES completion:nil];
+	[self stopAnimatingWithFadeAwayAnimation:YES completion:nil];
 }
 
 - (void)stopAnimatingWithFadeAwayAnimation:(BOOL)animated completion:(void (^)())completion
 {
-    if (_animating) {
-        if (animated) {
+	if (_animating) {
+		if (animated) {
 			[CATransaction begin]; {
 				[CATransaction setCompletionBlock:^{
 					[_spinnerView removeAnimationForKey:@"refreshing"];
@@ -219,7 +219,7 @@
 				
 				[_spinnerView addAnimation:both forKey:@"stop animating fade out"];
 			} [CATransaction commit];
-        } else {
+		} else {
 			CABasicAnimation *rotation = [CABasicAnimation animationWithKeyPath:@"transform"];
 			rotation.fromValue = [_spinnerView.presentationLayer valueForKey:@"transform"];
 			rotation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-M_PI_2, 0.0, 0.0, 1.0)];
@@ -229,15 +229,15 @@
 			[_spinnerView removeAnimationForKey:@"refreshing"];
 			[_spinnerView addAnimation:rotation forKey:@"stop animating"];
 			
-            [self _updateProgressAnimated:YES];
-            
-            if (completion != nil) {
-                completion();
-            }
-        }
+			[self _updateProgressAnimated:YES];
+			
+			if (completion != nil) {
+				completion();
+			}
+		}
 		
 		_animating = NO;
-    }
+	}
 }
 
 @end

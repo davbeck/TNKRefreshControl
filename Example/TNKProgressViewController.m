@@ -23,7 +23,7 @@
 @implementation TNKProgressViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+	[super viewDidLoad];
 	
 	_fade = YES;
 }
