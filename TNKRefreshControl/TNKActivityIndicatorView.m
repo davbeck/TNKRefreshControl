@@ -162,24 +162,11 @@
 		[_spinnerView addAnimation:refreshingAnimation forKey:@"refreshing"];
 		
 		if (animated) {
-			[CATransaction begin]; {
-				[CATransaction setCompletionBlock:completion];
-				
-				CABasicAnimation *opacity = [CABasicAnimation animationWithKeyPath:@"opacity"];
-				opacity.fromValue = @0.0;
-				opacity.toValue = @1.0;
-				
-				CABasicAnimation *transform = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-				transform.fromValue = @0.0;
-				transform.toValue = @1.0;
-				
-				CAAnimationGroup *both = [CAAnimationGroup animation];
-				both.duration = 0.2;
-				both.animations = @[opacity, transform];
-				both.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-				
-				[_spinnerView addAnimation:both forKey:@"start animating fade in"];
-			} [CATransaction commit];
+			[UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationCurveEaseInOut animations:^{
+				self.alpha = 1;
+			} completion:nil];
+		} else {
+			self.alpha = 1;
 		}
 	}
 }
@@ -192,51 +179,33 @@
 - (void)stopAnimatingWithFadeAwayAnimation:(BOOL)animated completion:(void (^)())completion
 {
 	if (_animating) {
+		_animating = NO;
+		
 		if (animated) {
-			[CATransaction begin]; {
-				[CATransaction setCompletionBlock:^{
+			[UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationCurveEaseInOut animations:^{
+				self.alpha = 0;
+			} completion:^(BOOL finished) {
+				if (finished && !_animating) {
+					self.alpha = 1;
 					[_spinnerView removeAnimationForKey:@"refreshing"];
-					
-					[self _updateProgressAnimated:NO];
-					
-					if (completion != nil) {
-						completion();
-					}
-				}];
+				}
 				
-				CABasicAnimation *opacity = [CABasicAnimation animationWithKeyPath:@"opacity"];
-				opacity.fromValue = @1.0;
-				opacity.toValue = @0.0;
+				[self _updateProgressAnimated:NO];
 				
-				CABasicAnimation *transform = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-				transform.fromValue = @1.0;
-				transform.toValue = @0.0;
-				
-				CAAnimationGroup *both = [CAAnimationGroup animation];
-				both.duration = 0.5;
-				both.animations = @[opacity, transform];
-				both.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-				
-				[_spinnerView addAnimation:both forKey:@"stop animating fade out"];
-			} [CATransaction commit];
+				if (completion != nil) {
+					completion();
+				}
+			}];
 		} else {
-			CABasicAnimation *rotation = [CABasicAnimation animationWithKeyPath:@"transform"];
-			rotation.fromValue = [_spinnerView.presentationLayer valueForKey:@"transform"];
-			rotation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-M_PI_2, 0.0, 0.0, 1.0)];
-			rotation.duration = 0.2;
-			rotation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-			
 			[_spinnerView removeAnimationForKey:@"refreshing"];
-			[_spinnerView addAnimation:rotation forKey:@"stop animating"];
 			
-			[self _updateProgressAnimated:YES];
+			self.alpha = 1;
+			[self _updateProgressAnimated:NO];
 			
 			if (completion != nil) {
 				completion();
 			}
 		}
-		
-		_animating = NO;
 	}
 }
 

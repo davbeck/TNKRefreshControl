@@ -241,7 +241,7 @@ typedef NS_ENUM(NSUInteger, TNKRefreshControlState) {
 	}
 	_state = TNKRefreshControlStateEnding;
 	
-	BOOL animate = self.scrollView.contentOffset.y < -self.scrollView.contentInset.top;
+	BOOL animate = self.scrollView.contentOffset.y <= -self.scrollView.contentInset.top;
 	[_activityIndicator stopAnimatingWithFadeAwayAnimation:animate completion:^{
 		// if we are at the very tippy top of the scroll view, this wouldn't get called in a way that would change the state back automatically
 		[self _layoutScrollView];
